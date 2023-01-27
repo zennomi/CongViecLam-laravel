@@ -1,0 +1,28 @@
+<?php
+
+namespace App\View\Components\Website\Modal;
+
+use Illuminate\View\Component;
+
+class CandidateProfileModal extends Component
+{
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Get the view / contents that represent the component.
+     *
+     * @return \Illuminate\Contracts\View\View|\Closure|string
+     */
+    public function render()
+    {
+        return view('components.website.modal.candidate-profile-modal');
+    }
+}

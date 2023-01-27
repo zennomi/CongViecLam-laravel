@@ -1,0 +1,169 @@
+@mixin light-theme-mode {}
+
+@mixin dark-theme-mode {
+  --bs-white: #132238;
+  --bs-white-2: #05182E;
+  --bs-bg-dev-linear-gradient: linear-gradient(180deg, rgba(222, 228, 218, 0) 0%, rgba(222, 228, 218, 0.12) 100%);
+  --bs-bg-ui-linear-gradient: linear-gradient(90deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.9) 100%);
+  --bs-bg-ui-linear-gradient-2: linear-gradient(180deg, #05182E 0%, #0E4789 85.03%);
+  --bs-bg-ui-linear-gradient-3: linear-gradient(180deg, #132238 0%, #2B384C 100%);
+  --bs-bg-ui-linear-gradient-4: linear-gradient(180deg, rgba(243, 236, 255, 0.04) 0%, rgba(243, 236, 255, 0) 100%), #132238;
+  --bs-bg-ui-linear-gradient-5: linear-gradient(180deg, rgba(19, 34, 56, 0.8) 0%, rgba(43, 56, 76, 0.8) 100%), #132238;
+  --bs-bg-ui-linear-gradient-6: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0.8) 43.44%, rgba(255, 255, 255, 0) 100%);
+  --bs-bg-ui-linear-gradient-7: linear-gradient(180deg, #2B384C 0%, rgba(43, 56, 76, 0) 100%), #132238;
+  --bs-bg-ui-linear-gradient-8: linear-gradient(180deg, rgba(232, 241, 252, 0.04) 0%, rgba(232, 241, 252, 0) 100%), #132238;
+  --bs-gray-900: #fff;
+  --bs-gray-600: #fff;
+  --bs-gray-100: #2B384C;
+  --bs-gray-600-2: #87909D;
+  --bs-gray-700: #A5ACB5;
+  --bs-bg-dev-services: #05182E;
+  --bs-primary-50: #2B384C;
+  --bs-gray-900-2: #2B384C;
+  --bs-gray-800: #132238;
+  --bs-border-one: #2B384C;
+  --bs-primary-500-2: #132238;
+  --bs-border-two: #000;
+  --bs-ellips-1: #2B384C;
+  --bs-ellips-2: rgba(255, 217, 26, 0.2);
+  --bs-secondary-300: #FFD91A;
+  --bs-secondary-100: #2B384C;
+  --bs-danger-50: #2B384C;
+  --bs-opacity-2: 0.2;
+  --bs-tertiary-50: #05182E;
+  --bs-gray-50: #05182E;
+  --bs-success-50: #05182E;
+  --bs-secondary-100: #05182E;
+  --bs-secondary-50: #05182E;
+}
+
+@mixin dark-mode {
+
+  [data-theme="dark"] &,
+  .dark-mode-texts & {
+    @content;
+  }
+}
+
+@mixin light-mode {
+
+  [data-theme="dark"] &,
+  .dark-mode-texts & {
+    @content;
+  }
+}
+
+// #FCFDFE, #F4F7FA, #F8F8F8, #ECF2F7, #FDFDFF,
+
+body[data-theme="dark"] {
+  .ui-contact-area {
+    &__wrapper {
+      border-color: #2B384C;
+      box-shadow: 0px 48px 88px rgba(0, 0, 0, 0.12);
+    }
+  }
+
+  .ui-btn.ui-btn-outline-primary {
+    border-color: #2B384C;
+
+    &:hover {
+      border-color: var(--bs-tertiary-500);
+    }
+  }
+
+  .flc-work-process-section {
+    background: rgba(43, 56, 76, 0.6);
+
+    .flc-work-process-count {
+      color: #2B384C !important;
+    }
+  }
+
+  .photographer-pricing-area {
+    background: rgba(43, 56, 76, 0.6) !important;
+  }
+
+  .photographer-contact-area {
+    background: rgba(43, 56, 76, 0.8);
+  }
+
+  .photographer-footer-area {
+    background: #2B384C;
+  }
+
+  .doctor-hero-area {
+    background: #05182E;
+  }
+
+  .doctor-event-area {
+    background: rgba(43, 56, 76, 0.9) !important;
+  }
+
+  .law-counter-section {
+    background-color: #05182E;
+  }
+
+  .law-blog-section {
+    background: rgba(43, 56, 76, 0.9);
+  }
+
+  .bg-gray-50 {
+    background: #05182E;
+  }
+
+  .dev-company-info--modifi {
+    background: #05182E;
+    border-top: 1px solid var(--bs-gray-100);
+  }
+
+  .client-testimonial {
+    background: white !important;
+  }
+
+  .dev-contact-area {
+    &__wrapper {
+      border: transparent;
+      box-shadow: none;
+
+      .contact-content__cotacat-block {
+        background: #05182E;
+      }
+
+      .contact-content__info-block {
+        .icon {
+          background: #05182E !important;
+        }
+      }
+    }
+  }
+
+  .article-case-study-area {
+    .ui-blog-card {
+      &:hover {
+        border-color: #2B384C;
+        box-shadow: 0px 24px 64px rgba(0, 0, 0, 0.24);
+      }
+    }
+  }
+
+  .error-page-area {
+    &__content {
+      .error_img {
+        svg {
+
+          .c1,
+          .c2,
+          .c3,
+          .c3,
+          .c4,
+          .c5,
+          .c6,
+          .c7,
+          .c8 {
+            fill: #FFD91A;
+          }
+        }
+      }
+    }
+  }
+}

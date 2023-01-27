@@ -1,0 +1,158 @@
+@media (max-width:991px) {
+    body[dir=rtl] .main-menu {
+        left: 0px !important;
+        right: -320px !important;
+    }
+    body[dir=rtl] .main-menu.active-mobile-menu{
+        right: 0px !important;
+    }
+}
+
+body[dir=rtl] .n-header--bottom__right{
+    margin-left: 0px;
+    margin-right: auto;
+}
+body[dir=rtl] .jobcardStyle1 .rt-single-icon-box .icon-thumb{
+    margin-right: 0px !important;
+    margin-left: 16px !important;
+}
+body[dir=rtl] .jobsearchBox .fromGroup {
+    margin-right: 0px !important;
+    margin-left: 20px !important;
+    border-right: 0px solid transparent;
+    border-left: 1px solid #EDEFF5;
+}
+body[dir=rtl] .popular-category-icon {
+    margin-right: 0px !important;
+    margin-left: 16px !important;
+}
+body[dir=rtl] .ph-arrow-right, body[dir=rtl] .ph-arrow-left {
+    transform: rotate(180deg);
+}
+body[dir=rtl] .search-icon{
+    margin-right: 0px !important;
+    margin-left: 24px !important;
+}
+body[dir=rtl] .jobcardStyle1 .rt-single-icon-box .icon-thumb .profile-image{
+    width: 110px !important;
+    height: 110px !important;
+}
+body[dir=rtl] .icon-thumb .profile-image img{
+    transform: translate(0%, -50%) !important;
+}
+
+body[dir=rtl] .select2.select2-container {
+    z-index: 5 !important;
+}
+
+body[dir=rtl] .bgprefix-cover h5, body[dir=rtl] .bgprefix-cover form{
+    max-width: 312px;
+    margin-right: auto;
+
+}
+body[dir=rtl] .bgprefix-cover .max-312{
+    margin-right: auto;
+}
+
+body[dir=rtl] .btn .button-content-wrapper .button-icon.align-icon-right{
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+body[dir=rtl] .btn .button-content-wrapper .button-icon.align-icon-right svg{
+    transform: rotate(180deg);
+}
+body[dir=rtl] .jobcardStyle1 .rt-single-icon-box .iconbox-content .loacton i{
+    margin-right: 0px;
+    margin-left: 8px;
+}
+body[dir=rtl] .jobcardStyle1 .rt-single-icon-box .iconbox-content .loacton{
+    margin-right: 0px;
+}
+body[dir=rtl] .search-box svg{
+    left: 0px;
+    right: 20px;
+}
+body[dir=rtl] .search-box .search-input{
+    padding-left: 0px;
+    padding-right: 60px;
+}
+body[dir=rtl] .fromGroup.has-icon [type=text]{
+    padding-left: 0px;
+    padding-right: 36px;
+}
+body[dir=rtl] .fromGroup .icon-badge{
+    right: 0px;
+}
+body[dir=rtl] .has-icon .select2-container .select2-selection--single .select2-selection__rendered{
+    padding-right: 35px;
+    padding-left: 0px;
+}
+
+body[dir=rtl] .joblist-fliter-gorup .select2-container--default .select2-selection--single .select2-selection__arrow::after{
+    right: 0px;
+}
+body[dir=rtl] .jobcardStyle1 .rt-single-icon-box .iconbox-content .bottom-link span svg{
+    transform: rotate(180deg);
+}
+body[dir=rtl] .n-header--top .contact-info svg{
+    transform: rotate(-90deg);
+}
+body[dir=rtl] .blog-list-view.rt-single-icon-box .icon-thumb{
+    margin-right: 0px;
+    margin-left: 32px;
+}
+body[dir=rtl] .blog-post .entry-meta a{
+    margin-right: 0px;
+    margin-left: 27px;
+}
+body[dir=rtl] .blog-post .entry-meta a i{
+    margin-left: 6px;
+    margin-right: 0px;
+}
+body[dir=rtl] .blog-post .entry-footer a i{
+    margin-left: 0px;
+    margin-right: 12px;
+}
+body[dir=rtl] .rt-single-icon-box .rt-mr-16{
+    margin-right: 0px !important;
+    margin-left: 16px;
+}
+body[dir=rtl] .slick-track {
+    float: left;
+}
+body[dir=rtl] .auth-right-sidebar{
+    left: 0px !important;
+    right: auto;
+}
+/* body[dir=rtl] .reg-sidebar{
+    right: 320px !important;
+} */
+body[dir=rtl] .select2-container--default .select2-selection--single .select2-selection__arrow::after{
+    right: 0px;
+}
+body[dir=rtl] .fromGroup .has-badge{
+    right: auto;
+    left: 15px;
+}
+body[dir=rtl] .btn .button-content-wrapper .button-icon{
+    margin-right: 0px;
+    margin-left: 8px;
+}
+body[dir=rtl] .sidebar-content {
+    max-width: 700px;
+    padding-left: 0px;
+    padding-right: 138px;
+  }
+  @media (max-width: 1199.98px) {
+    body[dir=rtl] .sidebar-content {
+      padding-left: 0px;
+      padding-right: 70px;
+    }
+  }
+  @media (max-width: 575.98px) {
+    body[dir=rtl] .sidebar-content {
+      padding-left: 0px;
+      padding-right: 30px;
+    }
+  }

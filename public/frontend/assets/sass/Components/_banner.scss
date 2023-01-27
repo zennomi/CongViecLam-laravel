@@ -1,0 +1,241 @@
+section.banner-section {
+  background: rgba(241, 242, 244, 0.6);
+}
+
+.banner-content {
+  padding-top: 100px;
+  @include breakpoint(xl) {
+    max-width: 727px;
+    padding-top: 150px;
+  }
+
+  @include breakpoint(md) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+
+.rt-banner-height {
+  height: 920px;
+  @include breakpoint(xl) {
+    height: auto;
+  }
+}
+.rt-banner-height2 {
+  height: 992px;
+  @include breakpoint(xl) {
+    height: auto;
+  }
+}
+
+// banner seaarch
+.jobsearchBox {
+  padding: {
+    left: 33px;
+    top: 12px;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  border-radius: 8px;
+  box-shadow: 0px 12px 40px rgba(0, 44, 109, 0.04);
+  border: 1px solid var(--gray-100);
+  @include breakpoint(md) {
+    height: auto;
+    padding: 12px;
+  }
+  button {
+    height: 100%;
+    @include breakpoint(md) {
+      margin-top: 10px;
+    }
+  }
+  #{$all-text-inputs},
+  .form-control {
+    color: var(--gray-400);
+    &:focus,
+    &:focus-visible {
+      border-color: transparent !important;
+    }
+  }
+  .fromGroup {
+    // &::after {
+    //   position: absolute;
+    //   right: 20px;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    //   width: 1px;
+    //   height: 100%;
+    //   content: "";
+    //   background: var(--gray-50);
+    //   @include breakpoint(md){
+    //     display: none;
+    //   }
+    // }
+    margin-right: 20px;
+    border-right: 1px solid #EDEFF5;
+    &:last-child{
+      border: 0;
+    }
+
+    &.banner-select {
+      padding-right: 10px;
+      &.no-border{
+        border: 0;
+      }
+    }
+    &.no-border {
+      padding-right: 0px !important;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &.with-advanced-filter {
+    height: auto;
+  }
+  &.height-auto-xl{
+    @include breakpoint(xl){
+      height: auto;
+      padding: 15px;
+      .fromGroup{
+        &::after{
+          display: none;
+        }
+      }
+    }
+ 
+  }
+  &.height-auto-lg{
+    @include breakpoint(lg){
+      height: auto;
+      padding: 15px;
+      .fromGroup{
+        &::after{
+          display: none;
+        }
+      }
+    }
+  }
+  .left-content{
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @media (max-width: 1199px) {
+      margin-bottom: 20px;
+     }
+     @media (max-width: 767px) {
+      display: block;
+     }
+  }
+  .search-col{
+    flex: 0 0 23.33%;
+    max-width: 23.33%;
+    &:last-child{
+      flex: 0 0 16%;
+      max-width: 16%;
+    }
+    @media (max-width: 991px) {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+     }
+     @media (max-width: 767px) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: 0;
+      border: 0;
+     }
+ 
+  }
+  .search-col-4{
+    flex: 0 0 30%;
+    max-width: 30%;
+   @media (max-width: 1400px) {
+    flex: 0 0 28%;
+    max-width: 28%;
+   }
+   @media (max-width: 991px) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 0;
+    border: 0;
+   }
+  }
+}
+
+.banner-quciks-links {
+  a {
+    color: var(--gray-700);
+    padding-right: 2px;
+    &:hover {
+      color: var(--primary-500);
+    }
+  }
+}
+
+.banner-mockup {
+  text-align: right;
+}
+.banner-content2 {
+  padding-left: 80px;
+  padding-top: 242px;
+  @include breakpoint(xxl) {
+    padding-left: 35px;
+  }
+  @include breakpoint(xl) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  @include breakpoint(lg) {
+    padding-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 100px;
+  }
+  @include breakpoint(md) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.banner-content3 {
+  padding-left: 80px;
+  padding-top: 242px;
+  @include breakpoint(xxl) {
+    padding-left: 35px;
+  }
+  @include breakpoint(xl) {
+    padding-top: 150px;
+  }
+  @include breakpoint(lg) {
+    padding-top: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 100px;
+  }
+  @include breakpoint(md) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.banner-section {
+  padding-top: 250px;
+  padding-bottom: 110px;
+  @include breakpoint(lg){
+    padding-top: 180px;
+    padding-bottom: 100px;
+  }
+  // @include breakpoint(xs){
+  //   padding-top: 100px;
+  //   padding-bottom: 50px;
+  // }
+}
+.home-five {
+  .mx-727 {
+    max-width: 727px;
+  }
+  .jobsearchBox {
+    max-width: 745px;
+  }
+}
+

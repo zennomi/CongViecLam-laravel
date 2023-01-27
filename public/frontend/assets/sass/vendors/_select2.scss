@@ -1,0 +1,117 @@
+.select2-container--default .select2-selection--single {
+  background: #fff;
+  border: 1px solid #E4E5E8;
+  height: 48px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #474C54;
+}
+.breadcrumbs{
+  .select2-container--default .select2-selection--single, 
+  .jobsearchBox {
+    border: 0;
+  }
+}
+
+.has-icon {
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 35px;
+    line-height: 48px;
+  }
+}
+
+.has-icon2 {
+  .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 52px;
+    line-height: 48px;
+  }
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: #464D61;
+  padding-right: 48px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  display: none;
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 100%;
+  &::after {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "\f102";
+    font-family: "flaticon";
+    font-size: 12px;
+    color: var(--gray-400);
+  }
+}
+.select2-results__option {
+  color: var(--gray-600);
+  padding: 10px 15px;
+}
+.select2-container--default
+  .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: #e8f1ff;
+  color: var(--primary-500);
+}
+.select2-container--default .select2-results__option--selected {
+  background-color: var(--gray-20);
+}
+.select2-dropdown {
+  border: 1px solid var(--gray-50);
+  box-shadow: 0px 12px 48px rgba(0, 44, 109, 0.1);
+}
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  line-height: 48px;
+}
+
+.select2-search--dropdown .select2-search__field {
+  height: 40px;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-left: 15px;
+}
+
+.modal-open {
+  .select2-container {
+    z-index: 99999;
+  }
+}
+// .select2-search--dropdown {
+//   display: none;
+// }
+
+//breadcrumbs3 components design
+
+// .with-advanced-filter {
+//   .has-icon
+//     .select2-container
+//     .select2-selection--single
+//     .select2-selection__rendered {
+//     line-height: 59px;
+//   }
+//   .select2-container--default
+//     .select2-selection--single
+//     .select2-selection__arrow {
+//     top: 6px;
+//   }
+// }
+.slick-loading .slick-list {
+  background: #fff url("../images/ajax-loader.gif") center center no-repeat;
+}
+
+.top-content {
+  height: auto !important;
+}

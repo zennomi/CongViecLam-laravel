@@ -1,0 +1,19 @@
+{
+    "Language": true,
+    "Blog": true,
+    "Faq": true,
+    "Testimonial": true,
+    "Newsletter": true,
+    "Tag": true,
+    "Plan": true,
+    "Candidate": true,
+    "Contact": true,
+    "Location": true,
+    "Currency": true,
+    "Seo": true,
+    "SetupGuide": true,
+    "MobileApp": true,
+    "Map": true,
+    "ThemeSwitcherWidget": true
+}
+

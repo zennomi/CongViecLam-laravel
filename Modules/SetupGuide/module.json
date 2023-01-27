@@ -1,0 +1,13 @@
+{
+    "name": "SetupGuide",
+    "alias": "setupguide",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SetupGuide\\Providers\\SetupGuideServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

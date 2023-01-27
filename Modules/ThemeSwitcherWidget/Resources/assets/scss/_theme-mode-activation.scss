@@ -1,0 +1,32 @@
+
+
+
+@import 'theme-mode-mixins';
+
+
+
+// Mode activation
+$theme-mode-active: 'light';
+
+
+
+body[data-theme='dark'],.dark-bg,.dark-mode-texts{
+  @include dark-theme-mode;
+  
+}
+
+
+body[data-theme='light'],.light-bg,.light-mode-texts {
+ @include light-theme-mode;
+}
+
+
+// Setting The Default Theme Mode
+body{
+  @if $theme-mode-active == 'dark' {
+    @include dark-theme-mode;
+  } @else {
+    @include light-theme-mode;
+  }
+ 
+}

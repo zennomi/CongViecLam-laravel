@@ -1,0 +1,13 @@
+{
+    "name": "ThemeSwitcherWidget",
+    "alias": "themeswitcherwidget",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ThemeSwitcherWidget\\Providers\\ThemeSwitcherWidgetServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
