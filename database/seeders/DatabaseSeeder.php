@@ -26,6 +26,8 @@ use Database\Seeders\OrganizationTypeSeeder;
 use Modules\Seo\Database\Seeders\SeoDatabaseSeeder;
 use Modules\Location\Database\Seeders\LocationDatabaseSeeder;
 use Modules\SetupGuide\Database\Seeders\SetupGuideDatabaseSeeder;
+use Database\Seeders\CandidateSeeder;
+use Database\Seeders\CompanySeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -66,7 +68,11 @@ class DatabaseSeeder extends Seeder
             NationalitySeeder::class,
             OrganizationTypeSeeder::class,
             TeamSizeSeeder::class,
-            CmsContentSeeder::class
+            CmsContentSeeder::class,
+
+            // user
+            CandidateSeeder::class,
+            CompanySeeder::class
         ]);
     }
 }

@@ -28,8 +28,8 @@ class CandidateSeeder extends Seeder
     {
         // Candidate
         $candidate = new User();
-        $candidate->name = 'John Doe';
-        $candidate->username = 'johndoe';
+        $candidate->name = 'Nguyễn Đăng Tuấn Anh';
+        $candidate->username = 'zennomi';
         $candidate->email = 'candidate@mail.com';
         $candidate->password = bcrypt('password');
         $candidate->role = 'candidate';
@@ -42,18 +42,19 @@ class CandidateSeeder extends Seeder
             'experience_id' => Experience::inRandomOrder()->value('id'),
             'education_id' => Education::inRandomOrder()->value('id'),
             'gender' => 'male',
-            'website' => 'https://johndoe.com',
+            'website' => 'https://zenno.moe',
             'title' => 'This is candidate Title !',
             'birth_date' => Carbon::now(),
             'marital_status' => 'married',
             'photo' => 'frontend/assets/images/all-img/model-image.jpg',
-            'bio' => 'Sometimes you may wish to stop running validation rules on an attribute after the first validation  failure. To do so, assign the bail rule to the attribute:',
+            'bio' => 'Một lần là wibu, mãi mãi là wibu.',
             'profile_complete' => 0,
+            'nationality_id' => 189,
         ]);
         $candidate->socialInfo()->create([
             'social_media' => 'facebook',
-            'url' => 'https://www.facebook.com/zakirsoft',
-            // 'google' => 'https://www.google.com/search?q=zakirsoft',
+            'url' => 'https://www.facebook.com/ngdatuananh',
+            // 'google' => 'https://www.google.com/search?q=zennomi',
             // 'facebook' => 'https://www.facebook.com/zakirsoft',
             // 'twitter' => 'https://www.twitter.com/zakirsoft',
             // 'instagram' => 'https://www.instagram.com/zakirsoft',
@@ -63,8 +64,8 @@ class CandidateSeeder extends Seeder
         $candidate->contactInfo()->create([
             'phone' => '+880123456789',
             'secondary_phone' => '+880123456789',
-            'email' => 'jhondoe@gmail.com',
-            'secondary_email' => 'doejhon@gmail.com',
+            'email' => 'ngdatuananh@gmail.com',
+            'secondary_email' => 'zennomi@zenno.moe',
         ]);
 
         Candidate::factory(50)->create();

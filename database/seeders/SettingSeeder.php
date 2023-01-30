@@ -18,7 +18,7 @@ class SettingSeeder extends Seeder
     public function run()
     {
         $setting = new Setting();
-        $setting->email = 'jobpilot@zakirsoft.com';
+        $setting->email = 'congvieclam@zenno.moe';
         $setting->dark_logo = "frontend/assets/images/logo/logo.png";
         $setting->light_logo = "frontend/assets/images/logo/logowhite.png";
         $setting->favicon_image = "frontend/assets/images/logo/fav.png";
@@ -30,19 +30,21 @@ class SettingSeeder extends Seeder
         $setting->accent_color = '#487CB8';
         $setting->frontend_primary_color = '#0A65CC';
         $setting->frontend_secondary_color = '#487CB8';
-        $setting->working_process_step1_title = "Create Account";
+        $setting->working_process_step1_title = "Tạo tài khoản";
         $setting->working_process_step1_description = "Aliquam facilisis egestas sapien, nec tempor leo tristique at.";
-        $setting->working_process_step2_title = "Upload Cv Resume";
+        $setting->working_process_step2_title = "Upload CV";
         $setting->working_process_step2_description = "Curabitur sit amet maximus ligula. Nam a nulla ante. Nam sodales";
-        $setting->working_process_step3_title = "Find Suitable Job";
+        $setting->working_process_step3_title = "Tìm công việc phù hợp";
         $setting->working_process_step3_description = "Curabitur sit amet maximus ligula. Nam a nulla ante. Nam sodales";
-        $setting->working_process_step4_title = "Apply Job";
+        $setting->working_process_step4_title = "Ứng tuyển";
         $setting->working_process_step4_description = "Curabitur sit amet maximus ligula. Nam a nulla ante. Nam sodales";
-        $setting->default_map = 'google-map';
+        $setting->default_map = 'map-box';
         $setting->google_map_key = '';
-        $setting->map_box_key = '';
+        $setting->map_box_key = 'pk.eyJ1IjoiemVubm9taSIsImEiOiJjbGRmYWo1NmIwbGVkM3FyODh6MHRtczg5In0.QftEQvp3G4d3pWzJ4KR11Q';
         $setting->default_long = 90.4112704917406;
         $setting->default_lat = 23.757853442382867;
+        $setting->app_country_type = 'single_base';
+        $setting->language_changing = 0;
         $setting->save();
 
         // Payment Setting
