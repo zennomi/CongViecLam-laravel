@@ -17,7 +17,6 @@ trait Candidateable
             $query = Candidate::with(array('user' => function ($query) {
                 $query->where('role', 'candidate');
             }))
-                ->latest()
                 ->with('user.contactInfo')
                 ->withCount(['bookmarkCandidates as bookmarked' => function ($q) {
                     $q->where('company_id', auth('user')->user()->company->id);
@@ -30,7 +29,6 @@ trait Candidateable
                 $query->where('role', 'candidate');
             }))
                 ->with('user.contactInfo')
-                ->latest()
                 ->where('visibility', 1);
         }
 
