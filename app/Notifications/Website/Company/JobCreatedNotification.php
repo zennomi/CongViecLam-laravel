@@ -57,7 +57,7 @@ class JobCreatedNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'title' => 'Your job has been created and waiting for admin approval',
+            'title' => 'Công việc của bạn đã được tạo và chờ admin xét duyệt.',
             'url' => route('website.job.details', $this->job->slug)
         ];
     }

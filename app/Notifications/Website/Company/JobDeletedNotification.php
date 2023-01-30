@@ -55,7 +55,7 @@ class JobDeletedNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'title' => 'A job has been deleted',
+            'title' => 'Một công việc đã bị xoá.',
             'url' => 'javascript:void(0)'
         ];
     }

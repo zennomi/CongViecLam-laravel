@@ -59,9 +59,9 @@ class BookmarkJobNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'title' => ucfirst($this->user->name) . ' has bookmarked your job',
+            'title' => ucfirst($this->user->name) . ' đã đánh dấu công việc.',
             'url' => route('website.job.details', $this->job->slug),
-            'title2' => 'You have bookmarked a job',
+            'title2' => 'Bạn đã đánh dấu một công việc.',
             'url2' => route('website.job.details', $this->job->slug)
         ];
     }

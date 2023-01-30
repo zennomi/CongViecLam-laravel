@@ -60,10 +60,10 @@ class CandidateBookmarkNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'title' => ucfirst($this->company->name). ' has bookmarked you',
+            'title' => ucfirst($this->company->name). ' đã đánh dấu bạn.',
             'url' => route('website.employe.details',$this->company->username),
-            'title2' => 'You have bookmarked '. $this->candidate->user->name,
-            'url2' => route('website.candidate.details',$this->candidate->user->username),
+            'title2' => 'Bạn đã đánh dấu '. $this->candidate->user->name,
+            'url2' => 'javascript:void(0)',
         ];
     }
 }
