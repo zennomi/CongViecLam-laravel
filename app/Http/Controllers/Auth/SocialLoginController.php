@@ -35,10 +35,12 @@ class SocialLoginController extends Controller
         $socialiteUserName = $socialiteUser->getName();
         $socialiteUseremail = $socialiteUser->getEmail();
 
-        $user = User::where([
-            'provider' => $provider,
-            'provider_id' =>  $socialiteUserId,
-        ])->first();
+        // $user = User::where([
+        //     'provider' => $provider,
+        //     'provider_id' =>  $socialiteUserId,
+        // ])->first();
+
+        $user = User::where(['email' => $socialiteUseremail])->first();
 
         if (!$user) {
 
