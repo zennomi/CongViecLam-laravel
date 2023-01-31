@@ -26,13 +26,6 @@
                     <ul class="rt-usefulllinks2">
                         <li><a href="{{ route('website.about') }}">{{ __('about') }}</a></li>
                         <li><a href="{{ route('website.contact') }}">{{ __('contact') }}</a></li>
-                        @guest
-                            <li><a href="{{ route('website.plan') }}">{{ __('pricing') }}</a></li>
-                        @endguest
-                        @if (auth('user')->check() && auth('user')->user()->role != 'candidate')
-                            <li><a href="{{ route('website.plan') }}">{{ __('pricing') }}</a></li>
-                        @endif
-                        <li><a href="{{ route('website.posts') }}">{{ __('blog') }}</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-6 rt-single-widget ">

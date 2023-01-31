@@ -507,7 +507,7 @@
     @endif
 
     <!-- Apply Job Modal -->
-    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header border-transparent">
@@ -554,7 +554,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
 @endsection
 
 @section('css')

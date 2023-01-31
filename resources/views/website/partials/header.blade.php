@@ -119,12 +119,6 @@
                                             <a class="{{ linkActive('company.myjob', 'text-primary') }}"
                                                 href="{{ route('company.myjob') }}">{{ __('my_jobs') }}</a>
                                         </li>
-                                        <li>
-                                            <a class="{{ linkActive('website.plan', 'text-primary') }}"
-                                                href="{{ route('website.plan') }}">
-                                                {{ __('pricing') }}
-                                            </a>
-                                        </li>
                                     </ul>
                                 </div>
                             @else
@@ -149,14 +143,6 @@
                                                 class="{{ linkActive('candidate.job', 'text-primary') }}"
                                                 href="{{ route('candidate.job.alerts') }}">{{ __('job_alert') }}</a>
                                         </li>
-                                        @if (auth('user')->user()->role != 'candidate')
-                                            <li>
-                                                <a class="{{ linkActive('website.plan', 'text-primary') }}"
-                                                    href="{{ route('website.plan') }}">
-                                                    {{ __('pricing') }}
-                                                </a>
-                                            </li>
-                                        @endif
                                     </ul>
                                 </div>
                             @endif
@@ -176,17 +162,7 @@
                                             class="{{ linkActive('website.company', 'text-primary') }}"
                                             href="{{ route('website.company') }}">{{ __('companies') }}</a>
                                     </li>
-                                    <li class="menu-item"><a
-                                            class="{{ linkActive('website.posts', 'text-primary') }}"
-                                            href="{{ route('website.posts') }}">{{ __('blog') }}</a>
-                                    </li>
                                     @guest
-                                        <li>
-                                            <a class="{{ linkActive('website.plan', 'text-primary') }}"
-                                                href="{{ route('website.plan') }}">
-                                                {{ __('pricing') }}
-                                            </a>
-                                        </li>
                                         <div class="mbl-btn d-flex">
                                             <a href="{{ route('register') }}"
                                                 class="btn btn-primary d-sm-none text-white">Create Account</a>
@@ -194,15 +170,6 @@
                                                 class="btn btn-outline-primary d-lg-none ms-2 ms-sm-0 text-primary-500 border-primary-100">{{ __('Sign In') }}</a>
                                         </div>
                                     @endguest
-
-                                    @if (auth('user')->check() && auth('user')->user()->role != 'candidate')
-                                        <div>
-                                            <a class="{{ linkActive('website.plan', 'text-primary') }}"
-                                                href="{{ route('website.plan') }}">
-                                                {{ __('pricing') }}
-                                            </a>
-                                        </div>
-                                    @endif
                                 </ul>
                             </div>
                         @endif

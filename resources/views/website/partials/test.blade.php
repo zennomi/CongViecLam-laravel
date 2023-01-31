@@ -39,12 +39,6 @@
                                                 class="{{ linkActive('company.myjob', 'text-primary') }}"
                                                 href="{{ route('company.myjob') }}">{{ __('applications') }}</a>
                                         </li>
-                                        <li>
-                                            <a class="{{ linkActive('website.plan', 'text-primary') }}"
-                                                href="{{ route('website.plan') }}">
-                                                {{ __('pricing') }}
-                                            </a>
-                                        </li>
                                     </ul>
                                 @else
                                     <ul class="menu-active-classes ">
@@ -67,14 +61,6 @@
                                                 class="{{ linkActive('candidate.job', 'text-primary') }}"
                                                 href="{{ route('candidate.job.alerts') }}">{{ __('job_alert') }}</a>
                                         </li>
-                                        @if (auth('user')->user()->role != 'candidate')
-                                            <li>
-                                                <a class="{{ linkActive('website.plan', 'text-primary') }}"
-                                                    href="{{ route('website.plan') }}">
-                                                    {{ __('pricing') }}
-                                                </a>
-                                            </li>
-                                        @endif
                                     </ul>
                                 @endif
                             @else
@@ -92,26 +78,6 @@
                                             class="{{ linkActive('website.company', 'text-primary') }}"
                                             href="{{ route('website.company') }}">{{ __('companies') }}</a>
                                     </li>
-                                    <li class="menu-item"><a class="{{ linkActive('website.posts', 'text-primary') }}"
-                                            href="{{ route('website.posts') }}">{{ __('blog') }}</a>
-                                    </li>
-                                    @guest
-                                        <li>
-                                            <a class="{{ linkActive('website.plan', 'text-primary') }}"
-                                                href="{{ route('website.plan') }}">
-                                                {{ __('pricing') }}
-                                            </a>
-                                        </li>
-                                    @endguest
-
-                                    @if (auth('user')->check() && auth('user')->user()->role != 'candidate')
-                                        <li>
-                                            <a class="{{ linkActive('website.plan', 'text-primary') }}"
-                                                href="{{ route('website.plan') }}">
-                                                {{ __('pricing') }}
-                                            </a>
-                                        </li>
-                                    @endif
                                 </ul>
                             @endif
                         </div><!-- /.main-menu -->
@@ -125,86 +91,6 @@
                                         {{ $cms_setting->footer_phone_no }}
                                     </a>
                                 </div>
-                            @endif
-                            @if ($setting->language_changing)
-                                <div class="dropdown">
-                                    @php
-                                        $language_count = count($languages) && count($languages) > 1;
-                                        $language_count2 = count($languages);
-                                        $current_language = currentLanguage() ? currentLanguage() : $defaultLanguage;
-                                    @endphp
-                                    <button class="btn {{ $language_count ? 'dropdown-toggle' : '' }}" type="button"
-                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="flag-icon {{ $current_language->icon }}"></i>
-                                        {{ $current_language->name }}
-                                    </button>
-                                    @if ($language_count)
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                            @foreach ($languages as $lang)
-                                                @if ($current_language->code != $lang->code)
-                                                    <li id="lang-dropdown-item">
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('changeLanguage', $lang->code) }}">
-                                                            <i class="flag-icon {{ $lang->icon }}"></i>
-                                                            {{ $lang->name }}
-                                                        </a>
-                                                    </li>
-                                                @endif
-                                            @endforeach
-                                        </ul>
-                                    @endif
-                                </div>
-                            @endif
-                            @if (setting('app_country_type') === 'multiple_base')
-                                <form action="{{ route('website.job') }}" method="GET" id="search-form"
-                                    class="mx-width-300">
-                                    <div class="d-flex">
-                                        @php
-                                            $selected_country = session('selected_country');
-                                        @endphp
-                                        <div class="">
-                                            <div class="dropdown">
-                                                <button class="btn dropdown-toggle" type="button" id=""
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                    @if ($selected_country)
-                                                        <i class="flag-icon {{ selected_country()->icon }}"></i>
-                                                        {{ selected_country()->name }}
-                                                    @else
-                                                        {{ __('all_country') }}
-                                                    @endif
-                                                </button>
-
-                                                <ul class="dropdown-menu mx-height-400 overflow-auto"
-                                                    aria-labelledby="dropdownMenuButton1">
-                                                    <li>
-                                                        <a class="dropdown-item"
-                                                            href="{{ route('website.set.country') }}">
-                                                            <svg width="26" height="26" fill="none"
-                                                                stroke="currentColor" viewBox="0 0 24 24"
-                                                                xmlns="http://www.w3.org/2000/svg">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                    stroke-width="2"
-                                                                    d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
-                                                            </svg>
-                                                            <span class="marginleft">
-                                                                {{ __('all_country') }}
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    @foreach ($headerCountries as $country)
-                                                        <li id="lang-dropdown-item">
-                                                            <a class="dropdown-item"
-                                                                href="{{ route('website.set.country', ['country' => $country->id]) }}">
-                                                                <i class="flag-icon {{ $country->icon }}"></i>
-                                                                {{ $country->name }}
-                                                            </a>
-                                                        </li>
-                                                    @endforeach
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
                             @endif
                         </div>
                     </div>

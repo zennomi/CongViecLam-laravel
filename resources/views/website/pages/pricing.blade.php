@@ -18,11 +18,9 @@
         <div class="container">
             <div class="row align-items-center breadcrumbs-height">
                 <div class="col-12 justify-content-center text-center">
-                    <div class="breadcrumb-title rt-mb-10"> {{ __('pricing') }}</div>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a href="{{ route('website.home') }}">{{ __('home') }}</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"> {{ __('pricing') }}</li>
                         </ol>
                     </nav>
                 </div>

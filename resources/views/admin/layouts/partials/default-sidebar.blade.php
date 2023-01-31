@@ -99,16 +99,6 @@
                     @if (userCan('post.view') || userCan('country.view') || userCan('state.view') || userCan('city.view') || userCan('newsletter.view') || userCan('newsletter.sendmail') || userCan('contact.view') || userCan('testimonial.view') || userCan('admin.view'))
                         <li class="nav-header text-uppercase">{{ __('others') }}</li>
                     @endif
-                    <!-- ======== Blog ====== -->
-                    @if (Module::collections()->has('Blog'))
-                        @if (userCan('post.view'))
-                            <x-admin.sidebar-list :linkActive="Route::is('module.blog.*') || Route::is('module.category.*') ? true : false" route="module.blog.index" parameter=""
-                                icon="fas fa-blog">
-                                {{ __('blog') }}
-                            </x-admin.sidebar-list>
-                        @endif
-                    @endif
-
                     <!--=========  Locations ========= -->
                     @if (Module::collections()->has('Location') || Module::collections()->has('Map'))
                         @if (userCan('country.view'))
