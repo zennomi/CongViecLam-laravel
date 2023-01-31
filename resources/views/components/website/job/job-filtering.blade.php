@@ -244,7 +244,7 @@
         }
 
         .noUi-connect {
-            background: #0066ff;
+            background: #00337C;
         }
 
         #priceRangeSlider {
@@ -256,7 +256,7 @@
             width: 20px;
             top: -10px;
             border-radius: 50%;
-            border: 2px solid #0066ff;
+            border: 2px solid #00337C;
         }
 
         .mapboxgl-ctrl {

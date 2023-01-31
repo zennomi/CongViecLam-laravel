@@ -92,7 +92,7 @@
                                     <div class="rt-mb-20 col-md-4">
                                         <x-forms.label name="min_salary" :required="true" />
                                         <div class="position-relative">
-                                            <input step="0.01" value="{{ old('min_salary', '50.00') }}"
+                                            <input step="10000" value="{{ old('min_salary', '100000') }}"
                                                 class="form-control @error('min_salary') is-invalid @enderror"
                                                 name="min_salary" type="number" placeholder="{{ __('min_salary') }}"
                                                 id="m">
@@ -105,7 +105,7 @@
                                     <div class="rt-mb-20 col-md-4">
                                         <x-forms.label name="max_salary" :required="true" />
                                         <div class="position-relative">
-                                            <input step="0.01" value="{{ old('max_salary', '100.00') }}"
+                                            <input step="10000" value="{{ old('max_salary', '10000000') }}"
                                                 class="form-control @error('max_salary') is-invalid @enderror"
                                                 name="max_salary" type="number" placeholder="{{ __('max_salary') }}"
                                                 id="m">

@@ -12,7 +12,7 @@ class SearchIcon extends Component
      *
      * @return void
      */
-    public function __construct($height = 24, $width = 24, $stroke = '#0066FF', $fill = 'none')
+    public function __construct($height = 24, $width = 24, $stroke = '#00337C', $fill = 'none')
     {
         $this->height = $height;
         $this->width = $width;

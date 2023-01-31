@@ -507,7 +507,7 @@
     @endif
 
     <!-- Apply Job Modal -->
-    <!-- <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header border-transparent">
@@ -554,7 +554,7 @@
                 </form>
             </div>
         </div>
-    </div> -->
+    </div>
 @endsection
 
 @section('css')
@@ -581,6 +581,7 @@
     <!-- ================ mapbox map ============== -->
     <script>
         function applyJobb(id, name) {
+            console.log($('#cvModal'));
             $('#cvModal').modal('show');
             $('#apply_job_id').val(id);
             $('#apply_job_title').text(name);
@@ -625,44 +626,5 @@
     </script>
     <!-- ================ mapbox map ============== -->
     <!-- ================ google map ============== -->
-    <script>
-        function initMap() {
-            var token = "{{ $setting->google_map_key }}";
-
-            var oldlat = {!! $job->lat ? $job->lat : setting('default_lat') !!};
-            var oldlng = {!! $job->long ? $job->long : setting('default_long') !!};
-
-            const map = new google.maps.Map(document.getElementById("google-map"), {
-                zoom: 7,
-                center: {
-                    lat: oldlat,
-                    lng: oldlng
-                },
-            });
-
-            const image =
-                "https://gisgeography.com/wp-content/uploads/2018/01/map-marker-3-116x200.png";
-            const beachMarker = new google.maps.Marker({
-
-                draggable: false,
-                position: {
-                    lat: oldlat,
-                    lng: oldlng
-                },
-                map,
-                // icon: image
-            });
-        }
-        window.initMap = initMap;
-    </script>
-    <script>
-        @php
-            $link1 = 'https://maps.googleapis.com/maps/api/js?key=';
-            $link2 = $setting->google_map_key;
-            $Link3 = '&callback=initMap&libraries=places,geometry';
-            $scr = $link1 . $link2 . $Link3;
-        @endphp;
-    </script>
-    <script src="{{ $scr }}" async defer></script>
     <!-- ================ google map ============== -->
 @endsection

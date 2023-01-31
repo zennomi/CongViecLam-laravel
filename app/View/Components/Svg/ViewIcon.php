@@ -12,7 +12,7 @@ class ViewIcon extends Component
      *
      * @return void
      */
-    public function __construct($height = 48, $width = 48, $stroke = '#0066FF', $fill = 'none')
+    public function __construct($height = 48, $width = 48, $stroke = '#00337C', $fill = 'none')
     {
         $this->height = $height;
         $this->width = $width;
