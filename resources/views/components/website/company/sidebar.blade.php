@@ -52,19 +52,6 @@
                 </a>
             </li>
             <li>
-                <a href="{{ route('company.plan') }}" class="{{ linkActive('company.plan') }}">
-                    <span class="button-content-wrapper ">
-                        <span class="button-icon align-icon-left">
-                            <i class="ph-notebook"></i>
-                        </span>
-                        <span class="button-text">
-                            {{ __('plans_billing') }}
-                        </span>
-                    </span>
-                </a>
-            </li>
-
-            <li>
                 <a href="{{ route('company.setting') }}" class="{{ linkActive('company.setting') }}">
                     <span class="button-content-wrapper ">
                         <span class="button-icon align-icon-left">

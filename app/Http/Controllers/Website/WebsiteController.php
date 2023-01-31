@@ -215,9 +215,9 @@ class WebsiteController extends Controller
                 abort_if(auth('user')->user()->company->id != $job->company_id, 404);
             }
         }
-
+        
         $data = $this->getJobDetails($job);
-
+        
         return view('website.pages.job-details', $data);
     }
 
@@ -258,16 +258,6 @@ class WebsiteController extends Controller
                 'message' => 'You are not authorized to perform this action.',
                 'success' => false
             ]);
-        } else {
-            $user_plan = $user->company->userPlan;
-        }
-
-        if (isset($user_plan) && $user_plan->candidate_cv_view_limit <= 0) {
-            return response()->json([
-                'message' => 'You have reached your limit for viewing candidate cv. Please upgrade your plan.',
-                'success' => false,
-                'redirect_url' => route('website.plan'),
-            ]);
         }
 
         $candidate = User::where('username', $request->username)
@@ -280,14 +270,9 @@ class WebsiteController extends Controller
 
         $candidate->candidate->birth_date = Carbon::parse($candidate->candidate->birth_date)->format('d F, Y');
 
-        if ($request->count_view) {
-            isset($user_plan) ? $user_plan->decrement('candidate_cv_view_limit') : '';
-        }
-
         return response()->json([
             'success' => true,
             'data' => $candidate,
-            'profile_view_limit' => 'You have ' . $user_plan->candidate_cv_view_limit . ' cv views remaining.',
         ]);
     }
 

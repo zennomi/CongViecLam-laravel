@@ -54,53 +54,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <h5>@lang('remaining_features_on_current_plan')</h5>
-                            <div class="col-xl-3 col-lg-6 col-md-6">
-                                <div class="single-feature-box bg-success-50">
-                                    <div class="single-feature-data">
-                                        <h6>{{ $userplan->job_limit }}</h6>
-                                        <p>{{ __('active_jobs') }}</p>
-                                    </div>
-                                    <div class="single-feature-icon">
-                                        <i class="ph-suitcase-simple text-success-500"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6">
-                                <div class="single-feature-box bg-warning-50">
-                                    <div class="single-feature-data">
-                                        <h6>{{ $userplan->highlight_job_limit }}</h6>
-                                        <p>{{ __('highlight_jobs') }}</p>
-                                    </div>
-                                    <div class="single-feature-icon">
-                                        <i class="ph-shield-star text-warning-500"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6">
-                                <div class="single-feature-box">
-                                    <div class="single-feature-data">
-                                        <h6>{{ $userplan->featured_job_limit }}</h6>
-                                        <p>{{ __('featured_jobs') }}</p>
-                                    </div>
-                                    <div class="single-feature-icon">
-                                        <i class="ph-circle-wavy-check text-primary-500"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-6 col-md-6">
-                                <div class="single-feature-box bg-danger-50">
-                                    <div class="single-feature-data">
-                                        <h6>{{ $userplan->candidate_cv_view_limit }}</h6>
-                                        <p>{{ __('profile_view') }}</p>
-                                    </div>
-                                    <div class="single-feature-icon">
-                                        <i class="ph-users-four text-danger-500"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="recently-applied-wrap d-flex justify-content-between align-items-center rt-mb-15">
                             <h3 class="f-size-16">{{ __('recent_jobs') }}</h3>
                             <a class="view-all text-gray-500 f-size-16 d-flex align-items-center"
@@ -193,26 +146,6 @@
                                                         </button>
                                                         <ul class="dropdown-menu dropdown-menu-end company-dashboard-dropdown"
                                                             aria-labelledby="dropdownMenuButton5">
-                                                            <li>
-                                                                <a href="{{ route('company.promote', $job->slug) }}"
-                                                                    class="dropdown-item">
-                                                                    <svg width="20" height="20" viewBox="0 0 20 20"
-                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                        <path
-                                                                            d="M10 17.5C14.1421 17.5 17.5 14.1421 17.5 10C17.5 5.85786 14.1421 2.5 10 2.5C5.85786 2.5 2.5 5.85786 2.5 10C2.5 14.1421 5.85786 17.5 10 17.5Z"
-                                                                            stroke="#0A65CC" stroke-width="1.5"
-                                                                            stroke-miterlimit="10" />
-                                                                        <path d="M6.875 10H13.125" stroke="#0A65CC"
-                                                                            stroke-width="1.5" stroke-linecap="round"
-                                                                            stroke-linejoin="round" />
-                                                                        <path d="M10 6.875V13.125" stroke="#0A65CC"
-                                                                            stroke-width="1.5" stroke-linecap="round"
-                                                                            stroke-linejoin="round" />
-                                                                    </svg>
-
-                                                                    {{ __('Promote Job') }}
-                                                                </a>
-                                                            </li>
                                                             <li>
                                                                 <a class="dropdown-item"
                                                                     href="{{ route('website.job.details', $job->slug) }}">

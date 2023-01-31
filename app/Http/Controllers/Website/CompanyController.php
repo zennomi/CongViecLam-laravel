@@ -231,19 +231,6 @@ class CompanyController extends Controller
         updateMap($jobCreated);
 
         if ($jobCreated) {
-            $user_plan = auth('user')->user()->company->userPlan()->first();
-
-            $user_plan->job_limit = $user_plan->job_limit - 1;
-            if ($featured) {
-                $user_plan->featured_job_limit = $user_plan->featured_job_limit - 1;
-            }
-            if ($highlight) {
-                $user_plan->highlight_job_limit = $user_plan->highlight_job_limit - 1;
-            }
-            $user_plan->save();
-
-            storePlanInformation();
-
             Notification::send(auth('user')->user(), new JobCreatedNotification($jobCreated));
 
             if (checkMailConfig()) {
@@ -256,7 +243,7 @@ class CompanyController extends Controller
         }
 
         flashSuccess('Job Created Successfully');
-        return redirect()->route('company.job.promote.show', $jobCreated->slug);
+        return redirect()->route('job.details', $jobCreated->slug);
     }
 
     public function showPromoteJob(Job $job)
@@ -388,20 +375,6 @@ class CompanyController extends Controller
     public function companyBookmarkCandidate(Request $request, Candidate $candidate)
     {
         $company = auth('user')->user()->company;
-
-        if ($request->cat) {
-            $user_plan = $company->userPlan;
-
-            if (isset($user_plan) && $user_plan->candidate_cv_view_limit <= 0) {
-                return response()->json([
-                    'message' => 'You have reached your limit for viewing candidate cv. Please upgrade your plan.',
-                    'success' => false,
-                    'redirect_url' => route('website.plan'),
-                ]);
-            }
-
-            isset($user_plan) ? $user_plan->decrement('candidate_cv_view_limit') : '';
-        }
 
         $check = $company->bookmarkCandidates()->toggle($candidate->id);
 
@@ -1030,33 +1003,11 @@ class CompanyController extends Controller
     public function jobClone(Job $job)
     {
         $user = auth('user')->user();
-        $user_plan = $user->company->userPlan;
-
-        if (!$user_plan->job_limit) {
-            session()->flash('error', 'You have reached your plan limit. Please upgrade your plan.');
-            return redirect()->route('company.plan');
-        }
 
         $newJob = $job->replicate();
         $newJob->created_at = now();
 
-        if ($job->featured && $user_plan->featured_job_limit) {
-            $newJob->featured = 1;
-            $user_plan->featured_job_limit = $user_plan->featured_job_limit - 1;
-        } else {
-            $newJob->featured = 0;
-        }
-
-        if ($job->highlight && $user_plan->highlight_job_limit) {
-            $newJob->highlight = 1;
-            $user_plan->highlight_job_limit = $user_plan->highlight_job_limit - 1;
-        } else {
-            $newJob->highlight = 0;
-        }
-
         $newJob->save();
-        $user_plan->job_limit = $user_plan->job_limit - 1;
-        $user_plan->save();
 
         storePlanInformation();
 

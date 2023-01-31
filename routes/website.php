@@ -98,8 +98,8 @@ Route::middleware('auth:user', 'verified')->group(function () {
             Route::get('plans', 'plan')->name('company.plan');
             Route::post('download/transaction/invoice/{transaction}', 'downloadTransactionInvoice')->name('company.transaction.invoice.download');
             Route::get('my-jobs', 'myjobs')->name('company.myjob');
-            Route::get('create/job', 'createJob')->name('company.job.create')->middleware('check_plan');
-            Route::post('/store/job', 'storeJob')->name('company.job.store')->middleware('check_plan');
+            Route::get('create/job', 'createJob')->name('company.job.create');
+            Route::post('/store/job', 'storeJob')->name('company.job.store');
             Route::get('/promote/job/{job:slug}', 'showPromoteJob')->name('company.job.promote.show');
             Route::get('/promote/{job:slug}', 'jobPromote')->name('company.promote');
             Route::get('/clone/{job:slug}', 'jobClone')->name('company.clone');
