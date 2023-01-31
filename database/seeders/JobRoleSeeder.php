@@ -16,7 +16,7 @@ class JobRoleSeeder extends Seeder
     public function run()
     {
         $educations = [
-            'Trưởng nhóm', 'Giám đốc', 'Trợ lý giám đốc', 'Quản lý', 'Giám đốc', 'Quản trị viên'
+            'Trưởng nhóm', 'Giám đốc', 'Trợ lý giám đốc', 'Quản lý', 'Quản trị viên'
         ];
 
         foreach ($educations as $education) {
