@@ -16,15 +16,15 @@ class JobCategorySeeder extends Seeder
     public function run()
     {
         $categories = [
-            'Engineer/Architects',
-            'Garments/Textile',
-            'Design/Creative',
-            'Hospitality/ Travel/ Tourism',
-            'IT & Telecommunication',
-            'Medical/Pharma',
-            'Driving/Motor Technician',
-            'Law/Legal',
-            'Others'
+            'Kỹ sư/Kiến trúc sư',
+            'Hàng may mặc/Dệt may',
+            'Thiết kế/Sáng tạo',
+            'Khách sạn/ Lữ hành/ Du lịch',
+            'CNTT & Viễn thông',
+            'Y tế/Dược phẩm',
+            'Lái xe/Kỹ thuật viên mô tô',
+            'Luật/Pháp lý',
+            'Khác'
         ];
 
         $icons = [

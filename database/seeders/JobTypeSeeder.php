@@ -16,7 +16,7 @@ class JobTypeSeeder extends Seeder
     public function run()
     {
         $types = [
-            'Full Time', 'Part Time', 'Contractual', 'Intern', 'Freelance'
+            'Toàn thời gian', 'Bán thời gian', 'Theo hợp đồng', 'Thực tập', 'Tự do'
         ];
 
         foreach ($types as $type) {

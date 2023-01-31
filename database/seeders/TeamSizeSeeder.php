@@ -16,7 +16,7 @@ class TeamSizeSeeder extends Seeder
     public function run()
     {
         $team_sizes = [
-            'Only Me','10 Members', '10-20 Members', '20-50 Members', '50-100 Members', '100-200 Members', '200-500 Members', '500+ Members'
+            'Chỉ mình tôi','10 thành viên', '10-20 thành viên', '20-50 thành viên', '50-100 thành viên', '100-200 thành viên', '200-500 thành viên', '500+ thành viên'
         ];
 
         foreach ($team_sizes as $size) {

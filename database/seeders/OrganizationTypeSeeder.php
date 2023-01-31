@@ -16,7 +16,7 @@ class OrganizationTypeSeeder extends Seeder
     public function run()
     {
         $types = [
-            'Government', 'Semi Government', 'Public', 'Private', 'NGO', 'International Agencies'
+            'Chính quyền', 'Đa chính quyền', 'Công khai', 'Riêng tư', 'Tổ chức phi chính phủ', 'Cơ quan quốc tế'
         ];
 
         foreach ($types as $type) {

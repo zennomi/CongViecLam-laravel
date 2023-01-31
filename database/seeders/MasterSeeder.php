@@ -63,9 +63,9 @@ class MasterSeeder extends Seeder
 
         // Language Create
         Language::create([
-            'name' => 'Vietnamese',
-            'code' => 'vi',
-            'icon' => 'flag-icon-vn',
+            'name' => 'English',
+            'code' => 'en',
+            'icon' => 'flag-icon-gb',
             'direction' => 'ltr',
         ]);
     }

@@ -28,8 +28,8 @@ class CandidateSeeder extends Seeder
     {
         // Candidate
         $candidate = new User();
-        $candidate->name = 'Nguyễn Đăng Tuấn Anh';
-        $candidate->username = 'zennomi';
+        $candidate->name = 'John Doe';
+        $candidate->username = 'johndoe';
         $candidate->email = 'candidate@mail.com';
         $candidate->password = bcrypt('password');
         $candidate->role = 'candidate';
@@ -42,19 +42,18 @@ class CandidateSeeder extends Seeder
             'experience_id' => Experience::inRandomOrder()->value('id'),
             'education_id' => Education::inRandomOrder()->value('id'),
             'gender' => 'male',
-            'website' => 'https://zenno.moe',
-            'title' => 'This is candidate Title !',
+            'website' => 'https://www.facebook.com/Zennomi',
+            'title' => 'Tôi là tôi',
             'birth_date' => Carbon::now(),
-            'marital_status' => 'married',
+            'marital_status' => 'đã có gia đình',
             'photo' => 'frontend/assets/images/all-img/model-image.jpg',
-            'bio' => 'Một lần là wibu, mãi mãi là wibu.',
+            'bio' => 'Sống ở đời phải có làm thì mới có ăn. Cần cù bù siêng năng...',
             'profile_complete' => 0,
-            'nationality_id' => 189,
         ]);
         $candidate->socialInfo()->create([
             'social_media' => 'facebook',
-            'url' => 'https://www.facebook.com/ngdatuananh',
-            // 'google' => 'https://www.google.com/search?q=zennomi',
+            'url' => 'https://www.facebook.com/Zennomi',
+            // 'google' => 'https://www.google.com/search?q=zakirsoft',
             // 'facebook' => 'https://www.facebook.com/zakirsoft',
             // 'twitter' => 'https://www.twitter.com/zakirsoft',
             // 'instagram' => 'https://www.instagram.com/zakirsoft',
@@ -62,10 +61,10 @@ class CandidateSeeder extends Seeder
             // 'youtube' => 'https://www.youtube.com/zakirsoft',
         ]);
         $candidate->contactInfo()->create([
-            'phone' => '+880123456789',
-            'secondary_phone' => '+880123456789',
-            'email' => 'ngdatuananh@gmail.com',
-            'secondary_email' => 'zennomi@zenno.moe',
+            'phone' => '+394299564',
+            'secondary_phone' => '+394299564',
+            'email' => 'zen@gmail.com',
+            'secondary_email' => 'zennomi@gmail.com',
         ]);
 
         Candidate::factory(50)->create();
