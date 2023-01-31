@@ -28,6 +28,7 @@ use Modules\Location\Database\Seeders\LocationDatabaseSeeder;
 use Modules\SetupGuide\Database\Seeders\SetupGuideDatabaseSeeder;
 use Database\Seeders\CandidateSeeder;
 use Database\Seeders\CompanySeeder;
+use Database\Seeders\JobSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -72,7 +73,11 @@ class DatabaseSeeder extends Seeder
 
             // user
             CandidateSeeder::class,
-            CompanySeeder::class
+            CompanySeeder::class,
+            
+            // jobs
+            JobSeeder::class,
+
         ]);
     }
 }

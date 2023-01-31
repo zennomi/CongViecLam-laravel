@@ -16,8 +16,8 @@ class WebsiteSettingSeeder extends Seeder
     public function run()
     {
         $website = new WebsiteSetting();
-        $website->phone = "(319) 555-0115";
-        $website->address = "6391 Elgin St. Celina, Delaware 10299, New York, United States of America";
+        $website->phone = "+8496142728";
+        $website->address = "Trường ĐH Kinh tế Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội";
         $website->map_address = 'Your Map';
         $website->facebook = "https://www.facebook.com";
         $website->instagram = "https://www.instagram.com";
