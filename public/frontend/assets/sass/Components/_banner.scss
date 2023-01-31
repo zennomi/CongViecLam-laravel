@@ -132,10 +132,10 @@ section.banner-section {
   .search-col{
     flex: 0 0 23.33%;
     max-width: 23.33%;
-    &:last-child{
-      flex: 0 0 16%;
-      max-width: 16%;
-    }
+    // &:last-child{
+    //   flex: 0 0 16%;
+    //   max-width: 16%;
+    // }
     @media (max-width: 991px) {
       flex: 0 0 33.33%;
       max-width: 33.33%;

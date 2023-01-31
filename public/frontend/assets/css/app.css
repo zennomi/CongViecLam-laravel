@@ -6404,7 +6404,7 @@ section.banner-section {
   border-color: transparent !important;
 }
 .jobsearchBox .fromGroup {
-  margin-right: 20px;
+  /* margin-right: 20px; */
   border-right: 1px solid #EDEFF5;
 }
 .jobsearchBox .fromGroup:last-child {
@@ -6463,10 +6463,10 @@ section.banner-section {
   flex: 0 0 23.33%;
   max-width: 23.33%;
 }
-.jobsearchBox .search-col:last-child {
+/* .jobsearchBox .search-col:last-child {
   flex: 0 0 16%;
   max-width: 16%;
-}
+} */
 @media (max-width: 991px) {
   .jobsearchBox .search-col {
     flex: 0 0 33.33%;
