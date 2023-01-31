@@ -32,7 +32,7 @@ class JobApprovalNotification extends Notification
      */
     public function via($notifiable)
     {
-        return ['database'];
+        return ['database', 'mail'];
     }
 
     /**
@@ -43,10 +43,12 @@ class JobApprovalNotification extends Notification
      */
     public function toMail($notifiable)
     {
-        // return (new MailMessage)
-        //             ->line('The introduction to the notification.')
-        //             ->action('Notification Action', url('/'))
-        //             ->line('Thank you for using our application!');
+        return (new MailMessage)
+            ->subject('Công việc của bạn đã được duyệt')
+            ->greeting('Xin chào, ', $this->job->company->user->name)
+            ->line('Công việc ' . $this->job->title . 'đã được admin duyệt.')
+            ->action('Xem chi tiết', route('website.job.details', $this->job->slug))
+            ->line('Cảm ơn bạn đã tham gia CongViecLam!');
     }
 
     /**
@@ -58,7 +60,7 @@ class JobApprovalNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'title' => 'Admin has approved your job. Your job is live now.',
+            'title' => 'Admin đã duyệt công việc của bạn.',
             'url' => route('website.job.details', $this->job->slug)
         ];
     }
