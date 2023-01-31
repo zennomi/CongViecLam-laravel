@@ -34,12 +34,14 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        return redirect('admin/job');
+        // return view('admin.home');
     }
 
 
     public function dashboard()
     {
+        return redirect('admin/job');
         session(['layout_mode' => 'left_nav']);
         $jobs = Job::all();
 

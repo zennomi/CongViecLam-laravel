@@ -16,7 +16,7 @@
     @endphp
     <div class="wrapper">
         <!-- Navbar -->
-        <nav id="nav"
+        {{-- <nav id="nav"
             class="main-header navbar navbar-expand {{ $setting->dark_mode ? 'navbar-dark navbar-dark' : 'navbar-white navbar-light' }}">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
@@ -41,7 +41,7 @@
             <ul class="navbar-nav ml-auto">
                 @include('admin.layouts.partials.top-right-nav')
             </ul>
-        </nav>
+        </nav> --}}
 
         <!-- Support Menu -->
         @if(!config('app.hide_helper'))

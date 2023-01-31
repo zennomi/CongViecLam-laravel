@@ -5,7 +5,7 @@
     "Testimonial": true,
     "Newsletter": true,
     "Tag": true,
-    "Plan": true,
+    "Plan": false,
     "Candidate": true,
     "Contact": true,
     "Location": true,

@@ -10,7 +10,7 @@
             <!-- Sidebar Menu -->
             <nav class="sidebar-main-nav mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
-                    <x-admin.sidebar-list :linkActive="Route::is('admin.dashboard') ? true : false" route="admin.dashboard" parameter=""
+                    {{-- <x-admin.sidebar-list :linkActive="Route::is('admin.dashboard') ? true : false" route="admin.dashboard" parameter=""
                         icon="fas fa-tachometer-alt">
                         {{ __('dashboard') }}
                     </x-admin.sidebar-list>
@@ -22,7 +22,7 @@
                         <x-admin.sidebar-list :linkActive="request()->routeIs('order.index') ? true : false" route="order.index" icon="fas fa-money-bill">
                             {{ __('order') }}
                         </x-admin.sidebar-list>
-                    @endif
+                    @endif --}}
                     <!-- ======= Company ======== -->
                     @if (userCan('company.view'))
                         <x-admin.sidebar-list :linkActive="Request::is('admin/company*') ? true : false" route="company.index" icon="fas fa-building">
@@ -58,7 +58,7 @@
                         </x-admin.sidebar-list>
                     @endif
 
-                    @if (Module::collections()->has('Plan') && userCan('plan.view'))
+                    {{-- @if (Module::collections()->has('Plan') && userCan('plan.view'))
                         <x-admin.sidebar-list :linkActive="Route::is('module.plan.index') ||
                         Route::is('module.plan.create') ||
                         Route::is('module.plan.edit')
@@ -181,7 +181,7 @@
                         <x-admin.sidebar-list :linkActive="Route::is('user.*') ? true : false" route="user.index" parameter="" icon="fas fa-users">
                             {{ __('user_role_manage') }}
                         </x-admin.sidebar-list>
-                    @endif
+                    @endif --}}
                 </ul>
             </nav>
             <!-- Sidebar Menu -->
@@ -194,11 +194,11 @@
                             <p>{{ __('visit_website') }}</p>
                         </a>
                     </li>
-                    @if (userCan('setting.view'))
+                    {{-- @if (userCan('setting.view'))
                         <x-admin.sidebar-list :linkActive="request()->is('admin/settings/*') ? true : false" route="settings.general" icon="fas fa-cog">
                             {{ __('settings') }}
                         </x-admin.sidebar-list>
-                    @endif
+                    @endif --}}
                     <li class="nav-item">
                         <a href="javascript:void(0" class="nav-link"
                             onclick="event.preventDefault();document.getElementById('logout-form').submit();">
