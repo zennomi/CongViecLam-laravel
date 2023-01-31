@@ -93,24 +93,24 @@ class UserSeeder extends Seeder
         ]);
         SocialLink::create([
             'user_id' => $company->id,
-            'google' => 'https://www.google.com/search?q=zakirsoft',
-            'facebook' => 'https://www.facebook.com/zakirsoft',
-            'twitter' => 'https://www.twitter.com/zakirsoft',
-            'instagram' => 'https://www.instagram.com/zakirsoft',
-            'linkedin' => 'https://www.linkedin.com/zakirsoft',
-            'youtube' => 'https://www.youtube.com/zakirsoft',
+            'google' => 'https://www.facebook.com/Zennomi',
+            'facebook' => 'https://www.facebook.com/Zennomi',
+            'twitter' => 'https://www.facebook.com/Zennomi',
+            'instagram' => 'https://www.facebook.com/Zennomi',
+            'linkedin' => 'https://www.facebook.com/Zennomi',
+            'youtube' => 'https://www.facebook.com/Zennomi',
         ]);
         ContactInfo::create([
             'user_id' => $company->id,
-            'phone' => '+880123456789',
-            'email' => 'zakirsoft20@gmail.com',
+            'phone' => '+394299564',
+            'email' => 'bk@gmail.com',
         ]);
 
         // Admin
         $role = Role::first();
         $admin = new Admin();
-        $admin->name = "Zakir Soft";
-        $admin->email = "developer@mail.com";
+        $admin->name = "admin";
+        $admin->email = "bk@mail.com";
         $admin->image = "backend/image/default.png";
         $admin->password = bcrypt('password');
         $admin->email_verified_at = Carbon::now();

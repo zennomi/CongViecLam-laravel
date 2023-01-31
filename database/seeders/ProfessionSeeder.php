@@ -16,9 +16,9 @@ class ProfessionSeeder extends Seeder
     public function run()
     {
         $professions = [
-            'Physician', 'Engineer', 'Chef', 'Lawyer', 'Designer', 'Labourer', 'Dentist', 'Accountant', 'Dental Hygienist', 'Actor', 'Electrician', 'Software Developer', 'Pharmacist', 'Technician', 'Artist', 'Teacher', 'Journalist', 'Cashier', 'Secretary', 'Scientist', 'Soldier', 'Gardener', 'Farmer', 'Librarian', 'Driver', 'Fishermen', 'Police Officer ', 'Tailor'
+            'Vật lý học', 'Kĩ sư', 'Đầu bếp', 'Luật sư', 'Thiết kế', 'Công nhân', 'Bác sĩ', 'Kế toán', 'Vệ sinh răng miệng', 'Diễn viên', 'Thợ điện', 'Kĩ sư phần mềm', 'Dược sĩ', 'Kỹ thuật viên', 'Nghệ sĩ', 'Giáo viên', 'Nhà báo', 'Thu ngân', 'Thư ký', 'Nhà khoa học', 'Binh sĩ', 'Người làm vườn', 'Nông dân', 'Thủ thư', 'Tài xế', 'ngư dân', 'Cảnh sát ', 'Thợ may'
         ];
-
+        
         foreach ($professions as $profession) {
             Profession::create([
                 'name' => $profession,

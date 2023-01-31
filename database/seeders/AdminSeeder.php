@@ -20,8 +20,8 @@ class AdminSeeder extends Seeder
         // Admin
         $role = Role::first();
         $admin = new Admin();
-        $admin->name = "Zakir Soft";
-        $admin->email = "developer@mail.com";
+        $admin->name = "Nhóm7";
+        $admin->email = "bk@mail.com";
         $admin->image = "backend/image/default.png";
         $admin->password = bcrypt('password@12345');
         $admin->email_verified_at = Carbon::now();

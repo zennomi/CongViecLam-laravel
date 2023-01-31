@@ -16,19 +16,19 @@ class WebsiteSettingSeeder extends Seeder
     public function run()
     {
         $website = new WebsiteSetting();
-        $website->phone = "+8496142728";
-        $website->address = "Trường ĐH Kinh tế Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội";
-        $website->map_address = 'Your Map';
+        $website->phone = "0394299564";
+        $website->address = "Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội";
+        $website->map_address = "Địa chỉ trên bản đồ";
         $website->facebook = "https://www.facebook.com";
         $website->instagram = "https://www.instagram.com";
         $website->twitter = "https://www.twitter.com";
         $website->youtube = "https://www.youtube.com";
-        $website->title = "Who we are";
-        $website->sub_title = "We’re highly skilled and professionals team.";
-        $website->description = 'Praesent non sem facilisis, hendrerit nisi vitae, volutpat quam. Aliquam metus mauris, semper eu eros vitae, blandit tristique metus. Vestibulum maximus nec justo sed maximus.';
-        $website->live_job = "175,324";
-        $website->companies = "97,354";
-        $website->candidates = "3,847,154";
+        $website->title = "Chúng tôi là những người suy";
+        $website->sub_title = "Chúng tôi là nhóm có nhiều kinh nghiệm trong lĩnh vực công nghệ";
+        $website->description = 'Chúng tôi cũng cung cấp dịch vụ tuyển dụng nhân sự với các tính năng tiện lợi nhất cho nhà tuyển dụng và người tìm việc.';
+        $website->live_job = "175,324";// edit after
+        $website->companies = "97,354";// edit after
+        $website->candidates = "3,847,154";// edit after
         $website->save();
     }
 }

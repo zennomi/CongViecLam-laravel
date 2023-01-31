@@ -17,23 +17,23 @@ class ManualPaymentSeeder extends Seeder
         $manual_payments = [
             [
                 'type' => 'bank_payment',
-                'name' => 'Bank',
-                'description' => 'Payment made by bank',
+                'name' => 'Ngân hàng',
+                'description' => 'Thanh toán qua ngân hàng',
             ],
             [
                 'type' => 'cash_payment',
-                'name' => 'Cash On',
-                'description' => 'Payment made by cash',
+                'name' => 'Tiền mặt',
+                'description' => 'Thanh toán bằng tiền mặt',
             ],
             [
                 'type' => 'check_payment',
-                'name' => 'Check',
-                'description' => 'Payment made by check',
+                'name' => 'Chuyển khoản',
+                'description' => 'Thanh toán bằng chuyển khoản',
             ],
             [
                 'type' => 'custom_payment',
-                'name' => 'Custom',
-                'description' => 'Payment made by custom',
+                'name' => 'Tùy chỉnh',
+                'description' => 'Thanh toán tùy chỉnh',
             ],
         ];
 
