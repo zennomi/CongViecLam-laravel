@@ -23,7 +23,7 @@ use Database\Seeders\IndustryTypeSeeder;
 use Database\Seeders\RolePermissionSeeder;
 use Database\Seeders\WebsiteSettingSeeder;
 use Database\Seeders\OrganizationTypeSeeder;
-use Database\Seeders\SeoSeeder;
+use Modules\Seo\Database\Seeders\SeoDatabaseSeeder;
 use Modules\Location\Database\Seeders\LocationDatabaseSeeder;
 use Modules\SetupGuide\Database\Seeders\SetupGuideDatabaseSeeder;
 use Database\Seeders\CandidateSeeder;
@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
             LocationDatabaseSeeder::class,
             WebsiteSettingSeeder::class,
             CmsSeeder::class,
-            SeoSeeder::class,
+            SeoDatabaseSeeder::class,
             SetupGuideDatabaseSeeder::class,
             CookiesSeeder::class,
             MasterSeeder::class,

@@ -20,43 +20,43 @@ class SeoDatabaseSeeder extends Seeder
         $pages = [
             [
                 'page_slug' => 'home',
-                'title' => 'Welcome To CongViecLam',
-                'description' => 'CongViecLam is job portal laravel script designed to create, manage and publish jobs posts. Companies can create their profile and publish jobs posts. Candidate can apply job posts.',
+                'title' => 'Chào mừng bạn đến với CongViecLam',
+                'description' => 'CongViecLam là một trang web tìm kiếm việc làm được thiết kế để tạo, quản lý các bài đăng việc làm. Các công ty có thể tạo hồ sơ của họ và đăng các công việc. Ứng viên có thể ứng tuyển việc làm.',
                 'image' => 'frontend/assets/images/jobpilot.png',
             ],
             [
                 'page_slug' => 'jobs',
-                'title' => 'Jobs',
-                'description' => 'CongViecLam is job portal laravel script designed to create, manage and publish jobs posts. Companies can create their profile and publish jobs posts. Candidate can apply job posts.',
+                'title' => 'Việc làm',
+                'description' => 'CongViecLam là một trang web tìm kiếm việc làm được thiết kế để tạo, quản lý các bài đăng việc làm. Các công ty có thể tạo hồ sơ của họ và đăng các công việc. Ứng viên có thể ứng tuyển việc làm.',
                 'image' => 'frontend/assets/images/jobpilot.png',
             ],
             [
                 'page_slug' => 'job-details',
-                'title' => 'Job Details',
+                'title' => 'Chi tiết công việc',
                 'description' => 'CongViecLam is job portal laravel script designed to create, manage and publish jobs posts. Companies can create their profile and publish jobs posts. Candidate can apply job posts.',
                 'image' => 'frontend/assets/images/jobpilot.png',
             ],
             [
                 'page_slug' => 'candidates',
-                'title' => 'Candidates',
+                'title' => 'Ứng viên',
                 'description' => 'CongViecLam is job portal laravel script designed to create, manage and publish jobs posts. Companies can create their profile and publish jobs posts. Candidate can apply job posts.',
                 'image' => 'frontend/assets/images/jobpilot.png',
             ],
             [
                 'page_slug' => 'candidate-details',
-                'title' => 'Candidate Details',
+                'title' => 'Chi tiết ứng viên',
                 'description' => 'CongViecLam is job portal laravel script designed to create, manage and publish jobs posts. Companies can create their profile and publish jobs posts. Candidate can apply job posts.',
                 'image' => 'frontend/assets/images/jobpilot.png',
             ],
             [
                 'page_slug' => 'company',
-                'title' => 'Company',
+                'title' => 'Doanh nghiệp',
                 'description' => 'CongViecLam is job portal laravel script designed to create, manage and publish jobs posts. Companies can create their profile and publish jobs posts. Candidate can apply job posts.',
                 'image' => 'frontend/assets/images/jobpilot.png',
             ],
             [
                 'page_slug' => 'company-details',
-                'title' => 'Company Details',
+                'title' => 'Chi tiết doanh nghiệp',
                 'description' => 'CongViecLam is job portal laravel script designed to create, manage and publish jobs posts. Companies can create their profile and publish jobs posts. Candidate can apply job posts.',
                 'image' => 'frontend/assets/images/jobpilot.png',
             ],
@@ -80,13 +80,13 @@ class SeoDatabaseSeeder extends Seeder
             ],
             [
                 'page_slug' => 'login',
-                'title' => 'Login',
+                'title' => 'Đăng nhập',
                 'description' => 'CongViecLam is job portal laravel script designed to create, manage and publish jobs posts. Companies can create their profile and publish jobs posts. Candidate can apply job posts.',
                 'image' => 'frontend/assets/images/jobpilot.png',
             ],
             [
                 'page_slug' => 'register',
-                'title' => 'Register',
+                'title' => 'Đăng ký',
                 'description' => 'CongViecLam is job portal laravel script designed to create, manage and publish jobs posts. Companies can create their profile and publish jobs posts. Candidate can apply job posts.',
                 'image' => 'frontend/assets/images/jobpilot.png',
             ],
@@ -110,12 +110,10 @@ class SeoDatabaseSeeder extends Seeder
             ],
             [
                 'page_slug' => 'terms-condition',
-                'title' => 'Terms Condition',
+                'title' => 'Điều khoản công việc',
                 'description' => 'CongViecLam is job portal laravel script designed to create, manage and publish jobs posts. Companies can create their profile and publish jobs posts. Candidate can apply job posts.',
                 'image' => 'frontend/assets/images/jobpilot.png',
             ],
-
-
         ];
 
         foreach ($pages as $page) {

@@ -22,6 +22,18 @@ class SeoSeeder extends Seeder
                 'image' => asset('frontend/assets/images/jobpilot.png'),
             ],
             [
+                'page_slug' => 'jobs',
+                'title' => 'Việc làm',
+                'description' => 'CongViecLam là một trang web tìm kiếm việc làm được thiết kế để tạo, quản lý các bài đăng việc làm. Các công ty có thể tạo hồ sơ của họ và đăng các công việc. Ứng viên có thể ứng tuyển việc làm.',
+                'image' => 'frontend/assets/images/jobpilot.png',
+            ],
+            [
+                'page_slug' => 'job-details',
+                'title' => 'Chi tiết công việc',
+                'description' => 'CongViecLam is job portal laravel script designed to create, manage and publish jobs posts. Companies can create their profile and publish jobs posts. Candidate can apply job posts.',
+                'image' => 'frontend/assets/images/jobpilot.png',
+            ],
+            [
                 'page_slug' => 'blog',
                 'title' => 'Blog',
                 'description' => 'CongViecLam là một trang web tìm kiếm việc làm được thiết kế để tạo, quản lý các bài đăng việc làm. Các công ty có thể tạo hồ sơ của họ và đăng các công việc. Ứng viên có thể ứng tuyển việc làm.',
