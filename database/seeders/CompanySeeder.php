@@ -36,8 +36,8 @@ class CompanySeeder extends Seeder
     {
         // Company
         $company = new User();
-        $company->name = 'CongViecLam';
-        $company->username = 'Công Việc Làm';
+        $company->name = 'Cổng Việc Làm';
+        $company->username = 'congvieclam';
         $company->email = 'company@mail.com';
         $company->password = bcrypt('password');
         $company->role = 'company';
