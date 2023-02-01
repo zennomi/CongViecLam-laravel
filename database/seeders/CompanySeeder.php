@@ -37,8 +37,8 @@ class CompanySeeder extends Seeder
         // Company
         $company = new User();
         $company->name = 'CongViecLam';
-        $company->username = 'zennomi';
-        $company->email = 'bk@mail.com';
+        $company->username = 'Công Việc Làm';
+        $company->email = 'company@mail.com';
         $company->password = bcrypt('password');
         $company->role = 'company';
         $company->email_verified_at = Carbon::now();
