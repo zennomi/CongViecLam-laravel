@@ -66,6 +66,5 @@
         @endauth
     </div>
     <div id="show-more" data-bs-toggle="collapse" data-bs-target="#contact-more-collapse" aria-expanded="false"
-        aria-controls="contact-more-collapse" class="@guest login_required @endguest mt-2 rounded show-more">Show
-        Contact Information</div>
+        aria-controls="contact-more-collapse" class="@guest login_required @endguest mt-2 rounded show-more">Hiện thông tin liên lạc</div>
 </div>

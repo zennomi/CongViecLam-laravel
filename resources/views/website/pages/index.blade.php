@@ -47,20 +47,9 @@
                                         $map = setting('default_map');
                                     @endphp
                                     @if ($map == 'map-box')
-                                        <div class="flex-grow-1 fromGroup has-icon">
+                                        <div class="flex-grow-1 fromGroup has-icon rt-ml-24">
                                             <input type="hidden" name="location" id="insertlocation" value="">
                                             <span id="geocoder"></span>
-                                            <div class="icon-badge">
-                                                <x-svg.location-icon stroke="{{ $setting->frontend_primary_color }}"
-                                                    width="24" height="24" />
-                                            </div>
-                                        </div>
-                                    @endif
-                                    @if ($map == 'google-map')
-                                        <div class="flex-grow-1 fromGroup has-icon banner-select no-border">
-                                            <input type="text" id="searchInput" placeholder="Enter a location..."
-                                                name="location" value="{{ $oldLocation }}" />
-                                            <div id="google-map" class="d-none"></div>
                                             <div class="icon-badge">
                                                 <x-svg.location-icon stroke="{{ $setting->frontend_primary_color }}"
                                                     width="24" height="24" />
@@ -257,10 +246,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center text-h4 ft-wt-5">
+                    <label for="">{{ __('working_process') }}</label>
                     <span class="text-primary-500 has-title-shape">{{ config('app.name') }}
                         <img src="{{ asset('frontend') }}/assets/images/all-img/title-shape.png" alt="">
                     </span>
-                    <label for="">{{ __('working_process') }}</label>
                 </div>
             </div>
             <div class="rt-spacer-50"></div>
@@ -413,7 +402,7 @@
                 <div class="row">
                     @foreach ($top_companies as $company)
                         <div class="col-xl-4 col-md-6 fade-in-bottom  condition_class rt-mb-24">
-                            <div class="card jobcardStyle1">
+                            <div class="card jobcardStyle1 h-100">
                                 <div class="card-body">
                                     <div class="rt-single-icon-box">
                                         <div class="icon-thumb company-logo">
@@ -445,7 +434,7 @@
                                                         <i class="ph-arrow-right"></i>
                                                     </span>
                                                     <span class="button-text">
-                                                        {{ __('open_position') }}
+                                                        {{ Str::upper(__('open_position')) }}
                                                     </span>
                                                 </div>
                                             </a>
@@ -721,7 +710,7 @@
     </script>
     <script>
         $('.mapboxgl-ctrl-geocoder--icon').hide();
-        $('.mapboxgl-ctrl-geocoder--input').attr("placeholder", "Location");
+        $('.mapboxgl-ctrl-geocoder--input').attr("placeholder", "Vị trí");
         var oldLocation = "{!! $oldLocation !!}";
         if (oldLocation) {
             $('.mapboxgl-ctrl-geocoder--input').val(oldLocation);

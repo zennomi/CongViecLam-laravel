@@ -176,7 +176,7 @@
                                 <div class="row g-0">
                                     <div class="col-12 d-flex align-items-center">
                                         <div class="f-size-18 text-gray-900 follow-us">
-                                            {{ __('Follow us on') }}:
+                                            Mạng xã hội:
                                         </div>
                                     </div>
                                     <div class="col-12 rt-pt-lg-10">
@@ -308,9 +308,9 @@
         $('#show-more').on('click', function() {
             var value = $(this).attr('aria-expanded');
             if (value == 'true') {
-                $('#show-more').html('Hide information');
+                $('#show-more').html('Ẩn');
             } else {
-                $('#show-more').html('Show Contact Information');
+                $('#show-more').html('Hiện thông tin liên lạc');
             }
         })
     </script>

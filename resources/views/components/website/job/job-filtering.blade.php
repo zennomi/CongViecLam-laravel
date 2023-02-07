@@ -18,7 +18,7 @@
                 <div class="jobsearchBox  bg-gray-10 input-transparent with-advanced-filter height-auto-xl">
                     <div class="top-content d-flex flex-column flex-xl-row">
                         <div class="left-content">
-                            <div class="search-col-4 fromGroup has-icon position-relative">
+                            <div class="search-col-4 fromGroup has-icon position-relative banner-select no-border">
                                 <input id="search" name="keyword" type="text"
                                     placeholder="{{ __('job_title_keyword') }}" value="{{ request('keyword') }}"
                                     autocomplete="off">
@@ -365,7 +365,7 @@
     </script>
     <script>
         $('.mapboxgl-ctrl-geocoder--icon').hide();
-        $('.mapboxgl-ctrl-geocoder--input').attr("placeholder", "Location");
+        $('.mapboxgl-ctrl-geocoder--input').attr("placeholder", "Vị trí");
         var oldLocation = "{!! $oldLocation !!}";
         if (oldLocation) {
             $('.mapboxgl-ctrl-geocoder--input').val(oldLocation);

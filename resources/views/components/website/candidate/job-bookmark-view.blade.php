@@ -56,7 +56,7 @@
                                         <path d="M3.4375 7.5625H18.5625" stroke="#C5C9D6" stroke-width="1.5"
                                             stroke-linecap="round" stroke-linejoin="round"></path>
                                     </svg>
-                                    {{ $job->days_remaining }} {{ __('remaining') }}
+                                    {{ __('remaining') }} {{ $job->days_remaining }}
                                 </span>
                             </div>
                         </div>

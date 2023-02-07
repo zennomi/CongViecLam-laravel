@@ -6915,6 +6915,7 @@ section.banner-section {
   border-radius: 12px;
   align-items: center;
   transition: all 0.4s;
+  height: 100%!important;
 }
 .popular-category-item:hover {
   background: #FFFFFF;
@@ -10673,6 +10674,33 @@ ul.job-details-social li a svg {
 }
 /*# sourceMappingURL=app.css.map */
 
+.single-job-content .salery h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #0ba02c
+}
+
+.single-job-content .job-type h4,.single-job-content .salery h4 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #18191c
+}
+
+.single-job-content .job-type p,.single-job-content .salery p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #767f8c
+}
+
+.single-job-content .technology-details {
+  grid-template-columns: repeat(4,1fr)
+}
 .main-menu ul li a:last-child {
     padding-right: 20px !important;
 }

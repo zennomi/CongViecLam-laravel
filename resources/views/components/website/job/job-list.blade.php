@@ -28,7 +28,7 @@
                                 <x-svg.calender-icon stroke="#C5C9D6" />
 
                                 @if ($job->deadline_active)
-                                    <span>{{ $job->days_remaining }} {{ __('remaining') }}</span>
+                                    <span> {{ __('remaining') }} {{ $job->days_remaining }}</span>
                                 @else
                                     <span class="text-danger">{{ __('expired') }}</span>
                                 @endif

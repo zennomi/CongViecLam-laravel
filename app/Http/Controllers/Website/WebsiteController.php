@@ -549,7 +549,7 @@ class WebsiteController extends Controller
         }
 
 
-        $check['attached'] == [1] ? $message = 'Job added to favorite list' : $message = 'Job removed from favorite list';
+        $check['attached'] == [1] ? $message = 'Việc làm đã được thêm vào danh sách yêu thích' : $message = 'Việc làm đã được xoá khỏi danh sách yêu thích';
 
         flashSuccess($message);
         return back();
@@ -561,8 +561,8 @@ class WebsiteController extends Controller
             'resume_id' => 'required',
             'cover_letter' => 'required',
         ], [
-            'resume_id.required' => 'Please select resume',
-            'cover_letter.required' => 'Please enter cover letter',
+            'resume_id.required' => 'Chọn CV',
+            'cover_letter.required' => 'Nhập thư',
         ]);
 
         if ($validator->fails()) {
@@ -571,7 +571,7 @@ class WebsiteController extends Controller
         }
 
         if (auth('user')->user()->candidate->profile_complete != 0) {
-            flashError('Complete your profile before applying to jobs, Add your information, resume, and profile picture for a better chance of getting hired.');
+            flashError('Hoàn thiện hồ sơ của bạn.');
             return redirect()->route('candidate.dashboard');
         }
 
@@ -595,7 +595,7 @@ class WebsiteController extends Controller
             auth('user')->user()->notify(new ApplyJobNotification(auth('user')->user(), $job->company->user));
         }
 
-        flashSuccess('Job Applied Successfully');
+        flashSuccess('Ứng tuyển thành công');
         return back();
     }
 

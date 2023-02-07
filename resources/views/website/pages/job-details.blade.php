@@ -2,7 +2,7 @@
 
 @section('description')
     @php
-    $data = metaData('job-details');
+        $data = metaData('job-details');
     @endphp
     {{ $data->description }}
 @endsection
@@ -168,7 +168,8 @@
                                                         </span>
                                                     </button>
                                                 @endauth
-                                                <span class="d-block rt-pt-10 text-lg-end text-start f-size-14 text-gray-700 ">
+                                                <span
+                                                    class="d-block rt-pt-10 text-lg-end text-start f-size-14 text-gray-700 ">
                                                     {{ __('job_expire_in') }}
                                                     <span class="text-danger-500">
                                                         {{ $job->days_remaining }}
@@ -260,6 +261,47 @@
 
                 <div class="col-lg-5">
                     <div class="p-32 border border-2 border-primary-50 rt-rounded-12 rt-mb-24 lg:max-536">
+                        <div class="row">
+                            <div class="col-sm-6 salery tw-salery-border">
+                                <h4>Lương</h4>
+                                <h2>{{ $job->min_salary }}₫
+                                    -
+                                    {{ $job->max_salary }}₫
+                                </h2>
+                                <p>{{ $job->salary_type->name }}</p>
+                            </div>
+                            <div class="col-sm-6 job-type">
+                                <div class="remote">
+                                    <div class="text-center tw-mb-2">
+                                        <svg width="39" height="38" viewBox="0 0 39 38" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M32.73 10.6875H6.60498C5.94914 10.6875 5.41748 11.2192 5.41748 11.875V30.875C5.41748 31.5308 5.94914 32.0625 6.60498 32.0625H32.73C33.3858 32.0625 33.9175 31.5308 33.9175 30.875V11.875C33.9175 11.2192 33.3858 10.6875 32.73 10.6875Z"
+                                                stroke="#0A65CC" stroke-width="2.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path
+                                                d="M25.604 10.6875V8.3125C25.604 7.68261 25.3538 7.07852 24.9084 6.63312C24.463 6.18772 23.8589 5.9375 23.229 5.9375H16.104C15.4741 5.9375 14.87 6.18772 14.4246 6.63312C13.9792 7.07852 13.729 7.68261 13.729 8.3125V10.6875"
+                                                stroke="#0A65CC" stroke-width="2.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path
+                                                d="M33.9177 18.749C29.5867 21.2547 24.6701 22.5704 19.6665 22.5625C14.6638 22.5704 9.74794 21.2552 5.41748 18.7503"
+                                                stroke="#0A65CC" stroke-width="2.5" stroke-linecap="round"
+                                                stroke-linejoin="round"></path>
+                                            <path d="M17.8853 17.8125H21.4478" stroke="#0A65CC" stroke-width="2.5"
+                                                stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                    </div>
+                                    @if ($job->is_remote)
+                                        <h4 class="tw-mb-[2px]">Remote</h4>
+                                    @else
+                                        <h4 class="tw-mb-[2px]">Trực tiếp</h4>
+                                    @endif
+                                    <p class="tw-mb-0">{{ $job->vacancies }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-32 border border-2 border-primary-50 rt-rounded-12 rt-mb-24 lg:max-536">
                         <div class="body-font-1 ft-wt-5 rt-mb-32 ">{{ __('job_overview') }}</div>
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 rt-mb-32">
@@ -301,7 +343,8 @@
                                     </div>
                                     <div class="iconbox-content">
                                         <div class="f-size-12 text-gray-500 uppercase text-uppercase rt-mb-6">
-                                            {{ __('job_type') }}</div>
+                                            {{ __('job_type') }}
+                                        </div>
                                         <span class="d-block f-size-14 ft-wt-5 text-gray-900">
                                             {{ $job->job_type ? $job->job_type->name : '' }}
                                         </span>
@@ -315,7 +358,8 @@
                                     </div>
                                     <div class="iconbox-content">
                                         <div class="f-size-12 text-gray-500 uppercase text-uppercase rt-mb-6">
-                                            {{ __('job_role') }}</div>
+                                            {{ __('job_role') }}
+                                        </div>
                                         <span class="d-block f-size-14 ft-wt-5 text-gray-900">
                                             {{ $job->role ? $job->role->name : '' }}
                                         </span>
@@ -330,7 +374,8 @@
                                         </div>
                                         <div class="iconbox-content">
                                             <div class="f-size-12 text-gray-500 uppercase text-uppercase rt-mb-6">
-                                                {{ __('education') }}</div>
+                                                {{ __('education') }}
+                                            </div>
                                             <span class=d-block f-size-14 ft-wt-5 text-gray-900">
                                                 {{ $job->education ? $job->education->name : '' }}
                                             </span>
@@ -346,7 +391,8 @@
                                         </div>
                                         <div class="iconbox-content">
                                             <div class="f-size-12 text-gray-500 uppercase text-uppercase rt-mb-6">
-                                                {{ __('experience') }}</div>
+                                                {{ __('experience') }}
+                                            </div>
                                             <span class=d-block f-size-14 ft-wt-5 text-gray-900">
                                                 {{ $job->experience ? $job->experience->name : '' }}
                                             </span>
@@ -436,7 +482,7 @@
                                 @if ($job->company->website)
                                     <li class="d-flex justify-content-between align-items-start body-font-3 rt-mb-14">
                                         <span class="text-gray-500 d-block">{{ __('website') }}</span>
-                                        <a href="{{ $job->company->website }}" target="_black"  class="my-auto">
+                                        <a href="{{ $job->company->website }}" target="_black" class="my-auto">
                                             {{ __('learn_more') }}
                                         </a>
                                     </li>

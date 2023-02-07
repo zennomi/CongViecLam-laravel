@@ -146,17 +146,10 @@ a:not([href]):not([class]):hover {
   text-decoration: none;
 }
 
-pre,
+
 code {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
-}
-
-pre {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto;
-  -ms-overflow-style: scrollbar;
 }
 
 img {
@@ -369,18 +362,6 @@ code {
 
 a > code {
   color: inherit;
-}
-
-pre {
-  display: block;
-  font-size: 87.5%;
-  color: #212529;
-}
-
-pre code {
-  font-size: inherit;
-  color: inherit;
-  word-break: normal;
 }
 
 .container,
@@ -4023,15 +4004,6 @@ a.text-light:focus {
 
   a:not(.btn) {
     text-decoration: underline;
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre {
-    border: 1px solid #adb5bd;
-    page-break-inside: avoid;
   }
 
   tr,

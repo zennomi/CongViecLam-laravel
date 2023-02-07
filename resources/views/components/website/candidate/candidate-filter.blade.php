@@ -400,7 +400,7 @@
     </script>
     <script>
         $('.mapboxgl-ctrl-geocoder--icon').hide();
-        $('.mapboxgl-ctrl-geocoder--input').attr("placeholder", "Location");
+        $('.mapboxgl-ctrl-geocoder--input').attr("placeholder", "Vị trí");
         var oldLocation = "{!! $oldLocation !!}";
         if (oldLocation) {
             $('.mapboxgl-ctrl-geocoder--input').val(oldLocation);

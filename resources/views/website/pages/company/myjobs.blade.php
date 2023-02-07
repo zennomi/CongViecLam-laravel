@@ -79,8 +79,8 @@
                                                                     {{ ucfirst($job->job_type->name) }}
                                                                 </span>
                                                                 <span class="info-tools">
-                                                                    {{ $job->days_remaining }}
                                                                     {{ __('remaining') }}
+                                                                    {{ $job->days_remaining }}
                                                                 </span>
                                                             </div>
                                                         </div>
