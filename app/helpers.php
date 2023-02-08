@@ -511,7 +511,7 @@ if (!function_exists('currencyPosition')) {
         if ($position == 'left') {
             return $symbol . ' ' . $amount;
         } else {
-            return $amount . ' ' . $symbol;
+            return number_format($amount) . ' ' . $symbol;
         }
 
         return $amount;

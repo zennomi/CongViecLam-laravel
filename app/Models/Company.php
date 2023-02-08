@@ -49,24 +49,24 @@ class Company extends Model
               // Kanban board
               $company->applicationGroups()->createMany([
                 [
-                    'name' => 'No Group',
+                    'name' => 'Chưa phân loại',
                     'order' => 1,
                     'is_deleteable' => false
                 ],
                 [
-                    'name' => 'All Applications',
+                    'name' => 'Tất cả các đơn',
                     'order' => 1
                 ],
                 [
-                    'name' => 'Shortlisted',
+                    'name' => 'Đã lọc',
                     'order' => 2
                 ],
                 [
-                    'name' => 'Interview',
+                    'name' => 'Phỏng vấn',
                     'order' => 3
                 ],
                 [
-                    'name' => 'Rejected',
+                    'name' => 'Đã từ chối',
                     'order' => 4
                 ]
             ]);

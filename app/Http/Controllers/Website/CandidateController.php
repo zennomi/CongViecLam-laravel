@@ -61,7 +61,7 @@ class CandidateController extends Controller
     public function jobAlerts()
     {
 
-        $notifications = auth()->user()->notifications()->where('type', 'App\Notifications\Website\Candidate\RelatedJobNotification')->paginate(12);
+        $notifications = auth()->user()->notifications()->paginate(12);
 
         return view('website.pages.candidate.job-alerts', compact('notifications'));
     }

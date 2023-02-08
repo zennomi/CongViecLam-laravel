@@ -242,8 +242,8 @@ class CompanyController extends Controller
             }
         }
 
-        flashSuccess('Job Created Successfully');
-        return redirect()->route('job.details', $jobCreated->slug);
+        flashSuccess('Tạo công việc thành công!');
+        return redirect()->route('website.job.details', $jobCreated->slug);
     }
 
     public function showPromoteJob(Job $job)

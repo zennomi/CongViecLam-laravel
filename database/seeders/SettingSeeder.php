@@ -41,8 +41,8 @@ class SettingSeeder extends Seeder
         $setting->default_map = 'map-box';
         $setting->google_map_key = '';
         $setting->map_box_key = 'pk.eyJ1IjoiemVubm9taSIsImEiOiJjbGRmYWo1NmIwbGVkM3FyODh6MHRtczg5In0.QftEQvp3G4d3pWzJ4KR11Q';
-        $setting->default_long = 90.4112704917406;
-        $setting->default_lat = 23.757853442382867;
+        $setting->default_long = 105.8452245273792;
+        $setting->default_lat = 21.00467228601898;
         $setting->app_country_type = 'single_base';
         $setting->language_changing = 0;
         $setting->save();

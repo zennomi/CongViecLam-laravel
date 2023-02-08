@@ -217,7 +217,6 @@ class WebsiteController extends Controller
         }
         
         $data = $this->getJobDetails($job);
-        
         return view('website.pages.job-details', $data);
     }
 

@@ -53,8 +53,8 @@ class CompanySeeder extends Seeder
             'nationality_id' => Nationality::inRandomOrder()->value('id'),
             'bio' => 'CongViecLam là web tìm việc làm hàng đầu Viet Nam.',
             'profile_completion' => 1,
-            'logo' => 'https://s3.envato.com/files/385317130/Templatecookie-favicon.png',
-            'banner' => 'https://s3.envato.com/files/385317216/Profile%20Banner%20(1).jpg',
+            'logo' => 'https://telegraph-image-bak.pages.dev/file/3a26a5e56a6db560a6dfb.jpg',
+            'banner' => 'https://telegraph-image-bak.pages.dev/file/11bcaa4842a1d6a490d28.jpg',
             'vision' => 'CongViecLam là web tìm việc làm hàng đầu Viet Nam.',
         ]);
         $company->socialInfo()->create([

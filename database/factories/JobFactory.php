@@ -56,11 +56,11 @@ class JobFactory extends Factory
             'featured'       =>  rand(0, 1),
             'highlight'       =>  rand(0, 1),
             'apply_on'       =>  Arr::random(['app', 'email', 'custom_url','app','app']),
-            'apply_email'       =>  'templatecookie@gmail.com',
-            'apply_url'       =>  'https://forms.gle/qhUeH3qte7N3rSJ5A',
+            'apply_email'       =>  'ngdatuananh@gmail.com',
+            'apply_url'       =>  'https://forms.gle/aaNMRfF88KsY5prb7',
             'country' => $this->faker->country(),
-            'lat' => $this->faker->latitude(-90, 90),
-            'long' => $this->faker->longitude(-90, 90)
+            'lat' => $this->faker->latitude(8.6, 23),
+            'long' => $this->faker->longitude(102, 107)
         ];
     }
 }

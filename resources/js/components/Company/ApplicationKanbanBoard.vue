@@ -19,7 +19,7 @@
                         <div class="application-card">
                             <div class="appliaction-card-top" data-toggle="modal">
                                 <div class="profile-img" v-if="application.candidate.user">
-                                    <img width="48px" height="48px" :src="application.candidate.user.image_url" alt="image">
+                                    <img width="48px" height="48px" :src="application.candidate.user.image" alt="image">
                                 </div>
                                 <div class="profile-info">
                                     <a href="" class="name" v-if="application.candidate.user">
@@ -42,7 +42,7 @@
                                 </ul>
                                 <div class="download-cv-btn" v-if="application.candidate_resume_id">
                                     <a @click="downloadCv(application.candidate_resume_id)" href="javascript:void(0)" class="btn">
-                                        <span>Download Cv</span>
+                                        <span>Tải CV</span>
                                     </a>
                                 </div>
                             </div>
@@ -70,8 +70,8 @@
                                         <span class="text-danger" v-if="errors.name">{{ errors.name[0] }}</span>
                                     </div>
                                     <div class="d-flex justify-content-between mt-3 mb-5">
-                                        <button type="button" class="btn btn-secondary" @click="showModal = false">Cancel</button>
-                                        <button class="btn btn-primary">Update</button>
+                                        <button type="button" class="btn btn-secondary" @click="showModal = false">Huỷ</button>
+                                        <button class="btn btn-primary">Cập nhật</button>
                                     </div>
                                 </form>
                             </div>

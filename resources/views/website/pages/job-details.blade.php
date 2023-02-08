@@ -264,9 +264,9 @@
                         <div class="row">
                             <div class="col-sm-6 salery tw-salery-border">
                                 <h4>Lương</h4>
-                                <h2>{{ $job->min_salary }}₫
+                                <h2>{{ currencyPosition($job->min_salary) }}
                                     -
-                                    {{ $job->max_salary }}₫
+                                    {{ currencyPosition($job->max_salary) }}
                                 </h2>
                                 <p>{{ $job->salary_type->name }}</p>
                             </div>
@@ -539,10 +539,10 @@
                 <div class="rt-spacer-40 rt-spacer-md-20"></div>
                 <div class="related-jobs pb-5">
                     <div class="row">
-                        @foreach ($related_jobs as $job)
+                        @foreach ($related_jobs as $related_job)
                             <div class="col-12 col-sm-6 col-md-6 col-xl-4 mb-3">
                                 <div class="single-item">
-                                    <x-website.job.job-card :job="$job" />
+                                    <x-website.job.job-card :job="$related_job" />
                                 </div>
                             </div>
                         @endforeach
@@ -557,8 +557,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header border-transparent">
-                    <h5 class="modal-title" id="cvModalLabel">{{ __('job') }}: <span id="apply_job_title">Job
-                            Title</span></h5>
+                    <h5 class="modal-title" id="cvModalLabel">Công việc: <span id="apply_job_title">Tiêu đề</span></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form action="{{ route('website.job.apply', $job->slug) }}" method="POST">

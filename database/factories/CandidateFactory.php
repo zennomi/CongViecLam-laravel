@@ -83,8 +83,8 @@ class CandidateFactory extends Factory
             'bio' => $this->faker->text(),
             'profile_complete' => 0,
             'country' => $this->faker->country(),
-            'lat' => $this->faker->latitude(-90, 90),
-            'long' => $this->faker->longitude(-90, 90)
+            'lat' => $this->faker->latitude(8.6, 23),
+            'long' => $this->faker->longitude(102, 107)
         ];
     }
 }

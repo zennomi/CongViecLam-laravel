@@ -28,7 +28,6 @@
                                     <tr>
                                         <th>{{ __('job') }}</th>
                                         <th>{{ __('date_applied') }}</th>
-                                        <th>{{ __('status') }}</th>
                                         <th>{{ __('action') }}</th>
                                     </tr>
                                 </thead>
@@ -94,15 +93,6 @@
                                                     </div>
                                                 </td>
                                                 <td>{{ date('M d, Y s:m', strtotime($job->pivot->created_at)) }}</td>
-                                                <td class="text-{{ $job->deadline_active ? 'success' : 'danger' }}-500">
-                                                    @if ($job->deadline_active)
-                                                        <img src="{{ asset('frontend/assets/images/icon/check.png') }}"
-                                                            alt="">
-                                                        {{ __('active') }}
-                                                    @else
-                                                        {{ __('expired') }}
-                                                    @endif
-                                                </td>
                                                 <td>
                                                     <div class="db-job-btn-wrap d-flex justify-content-end">
                                                         <a href="{{ route('website.job.details', $job->slug) }}"
