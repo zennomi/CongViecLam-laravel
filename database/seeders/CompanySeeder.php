@@ -37,7 +37,7 @@ class CompanySeeder extends Seeder
         // Company
         $company = new User();
         $company->name = 'Cổng Việc Làm';
-        $company->username = 'congvieclam';
+        $company->username = 'paato';
         $company->email = 'company@mail.com';
         $company->password = bcrypt('password');
         $company->role = 'company';
@@ -51,11 +51,11 @@ class CompanySeeder extends Seeder
             'organization_type_id' =>  OrganizationType::inRandomOrder()->value('id'),
             'team_size_id'  =>  TeamSize::inRandomOrder()->value('id'),
             'nationality_id' => Nationality::inRandomOrder()->value('id'),
-            'bio' => 'CongViecLam là web tìm việc làm hàng đầu Viet Nam.',
+            'bio' => 'Paato là web tìm việc làm hàng đầu Viet Nam.',
             'profile_completion' => 1,
             'logo' => 'https://telegraph-image-bak.pages.dev/file/3a26a5e56a6db560a6dfb.jpg',
             'banner' => 'https://telegraph-image-bak.pages.dev/file/11bcaa4842a1d6a490d28.jpg',
-            'vision' => 'CongViecLam là web tìm việc làm hàng đầu Viet Nam.',
+            'vision' => 'Paato là web tìm việc làm hàng đầu Viet Nam.',
         ]);
         $company->socialInfo()->create([
             'social_media' => 'facebook',

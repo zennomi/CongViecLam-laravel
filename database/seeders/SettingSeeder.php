@@ -18,7 +18,7 @@ class SettingSeeder extends Seeder
     public function run()
     {
         $setting = new Setting();
-        $setting->email = 'congvieclam@zenno.moe';
+        $setting->email = 'paato@zenno.moe';
         $setting->dark_logo = "frontend/assets/images/logo/logo.png";
         $setting->light_logo = "frontend/assets/images/logo/logowhite.png";
         $setting->favicon_image = "frontend/assets/images/logo/fav.png";
@@ -28,8 +28,8 @@ class SettingSeeder extends Seeder
         $setting->nav_txt_color = '#C1D6F0';
         $setting->main_color = '#0A65CC';
         $setting->accent_color = '#487CB8';
-        $setting->frontend_primary_color = '#13005A';
-        $setting->frontend_secondary_color = '#00337C';
+        $setting->frontend_primary_color = '#0A65CC';
+        $setting->frontend_secondary_color = '#487CB8';
         $setting->working_process_step1_title = "Tạo tài khoản";
         $setting->working_process_step1_description = "Aliquam facilisis egestas sapien, nec tempor leo tristique at.";
         $setting->working_process_step2_title = "Upload CV";

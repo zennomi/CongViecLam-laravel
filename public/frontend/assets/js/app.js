@@ -16,7 +16,7 @@ function _defineProperty(obj, key, value) {
 
 /*
 * ----------------------------------------------------------------------------------------
-    Template Name:  CongViecLam - Job Portal Bootstrap 5 Template
+    Template Name:  Paato - Job Portal Bootstrap 5 Template
     Template URI: https://themeforest.net/user/templatecookie/portfolio
     Description: It’s a High-Quality and well organized Job Board HTML Template.
     Author: templatecookie
