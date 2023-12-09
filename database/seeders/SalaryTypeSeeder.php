@@ -16,7 +16,7 @@ class SalaryTypeSeeder extends Seeder
     public function run()
     {
         $types = [
-            'Tháng', 'Theo dự án', 'Giờ', 'Năm'
+            'Theo tháng', 'Theo dự án', 'Theo giờ', 'Theo năm'
         ];
 
         foreach ($types as $type) {
