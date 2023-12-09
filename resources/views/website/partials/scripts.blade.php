@@ -147,24 +147,24 @@
         "hideMethod": "fadeOut"
     }
 
-    $('.login_required').on('click', function (event) {
-        event.preventDefault();
+    // $('.login_required').on('click', function (event) {
+    //     event.preventDefault();
 
-        Swal.fire({
-            title: "{{ __('unauthenticated') }}",
-            text: "{{ __('if_you_perform_this_action_you_need_to_login_your_account_first_do_you_want_to_login_now') }}",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: "{{ __('yes_want_to_login') }}",
-            cancelButtonText: "{{ __('cancel') }}",
-        }).then((result) => {
-            if (result.value) {
-                window.location.href = route('login');
-            }
-        })
-    });
+    //     Swal.fire({
+    //         title: "{{ __('unauthenticated') }}",
+    //         text: "{{ __('if_you_perform_this_action_you_need_to_login_your_account_first_do_you_want_to_login_now') }}",
+    //         icon: 'warning',
+    //         showCancelButton: true,
+    //         confirmButtonColor: '#3085d6',
+    //         cancelButtonColor: '#d33',
+    //         confirmButtonText: "{{ __('yes_want_to_login') }}",
+    //         cancelButtonText: "{{ __('cancel') }}",
+    //     }).then((result) => {
+    //         if (result.value) {
+    //             window.location.href = route('login');
+    //         }
+    //     })
+    // });
     $('.no_permission').on('click', function (event) {
         event.preventDefault();
         Swal.fire({

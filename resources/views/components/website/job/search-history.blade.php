@@ -85,16 +85,16 @@
             </div>
         @endif
         @if (request('price_min'))
-            <div class="single-tag" data-bs-toggle="tooltip" data-bs-placement="top" title="Min Salary">
-                ${{ number_format((float) request('price_min'), 0, '.', '') }}
+            <div class="single-tag" data-bs-toggle="tooltip" data-bs-placement="top" title="Lương tối thiểu">
+                {{ number_format((float) request('price_min'), 0, '.', ',') }} ₫
                 <span class="close-tag pointer" onclick="closeField('price_min')">
                     <x-svg.cross-round-icon />
                 </span>
             </div>
         @endif
         @if (request('price_max'))
-            <div class="single-tag" data-bs-toggle="tooltip" data-bs-placement="top" title="Max Salary">
-                ${{ number_format((float) request('price_max'), 0, '.', '') }}
+            <div class="single-tag" data-bs-toggle="tooltip" data-bs-placement="top" title="Lương tối đa">
+                {{ number_format((float) request('price_max'), 0, '.', ',') }} ₫
                 <span class="close-tag pointer" onclick="closeField('price_max')">
                     <x-svg.cross-round-icon />
                 </span>

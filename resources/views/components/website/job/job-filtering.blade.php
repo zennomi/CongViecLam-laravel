@@ -236,7 +236,7 @@
     <link rel="stylesheet" href="{{ asset('frontend/plugins/mapbox/style.css') }}">
     <style>
         span.select2-container--default .select2-selection--single {
-            border: none !important;
+            /* border: none !important; */
         }
 
         span.select2-selection.select2-selection--single {
@@ -324,8 +324,9 @@
                     min: [0],
                     max: [maxRange],
                 },
+                step: 100000,
                 format: wNumb({
-                    decimals: 2,
+                    decimals: 0,
                     thousand: ',',
                     suffix: ' ({{ $currency_symbol }})',
                 }),

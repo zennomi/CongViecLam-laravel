@@ -1,4 +1,4 @@
-<div class="right-content">
+{{-- <div class="right-content">
     <nav>
         <div class="nav" id="nav-tab" role="tablist">
             <button class="nav-link active " id="nav-home-tab" data-bs-toggle="tab"
@@ -13,7 +13,7 @@
             </button>
         </div>
     </nav>
-</div>
+</div> --}}
 
 @push('frontend_scripts')
 <script>
@@ -26,17 +26,17 @@
     }
 
     function setStyle(style){
-        if (style == 'box') {
+        // if (style == 'box') {
             $('#nav-home-tab').addClass('active');
             $('#nav-home').addClass('show active');
             $('#nav-profile-tab').removeClass('active');
             $('#nav-profile').removeClass('show active');
-        } else {
-            $('#nav-home-tab').removeClass('active');
-            $('#nav-home').removeClass('show active');
-            $('#nav-profile-tab').addClass('active');
-            $('#nav-profile').addClass('show active');
-        }
+        // } else {
+        //     $('#nav-home-tab').removeClass('active');
+        //     $('#nav-home').removeClass('show active');
+        //     $('#nav-profile-tab').addClass('active');
+        //     $('#nav-profile').addClass('show active');
+        // }
     }
 </script>
 @endpush

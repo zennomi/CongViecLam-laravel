@@ -8,7 +8,7 @@
                 {{-- Search History --}}
                 <x-website.job.search-history />
 
-                <div class="flex-grow-0 rt-mb-20">
+                <div class="flex-grow-0 rt-mb-20 mt-3">
                     <div class="joblist-fliter-gorup">
 
                         <div class="left-content">
@@ -26,9 +26,12 @@
                                 <option {{ request('sort_by') == 'latest' ? 'selected' : '' }} value="latest">
                                     {{ __('latest') }}
                                 </option>
-                                <option {{ request('sort_by') == 'featured' ? 'selected' : '' }} value="featured">
-                                    {{ __('featured') }}
+                                <option {{ request('sort_by') == 'oldest' ? 'selected' : '' }} value="oldest">
+                                    {{ __('oldest') }}
                                 </option>
+                                {{-- <option {{ request('sort_by') == 'featured' ? 'selected' : '' }} value="featured">
+                                    {{ __('featured') }}
+                                </option> --}}
                             </select>
                         </div>
                         @if (request('location'))

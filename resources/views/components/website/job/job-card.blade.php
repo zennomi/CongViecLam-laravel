@@ -1,4 +1,5 @@
-<div class="card jobcardStyle1 {{ $job->highlight ? 'gradient-bg' : '' }}">
+{{-- <div class="card jobcardStyle1 {{ $job->highlight ? 'gradient-bg' : '' }}"> --}}
+<div class="card jobcardStyle1 gradient-bg h-100">
     <div class="card-body">
         <div class="rt-single-icon-box">
             <a href="{{ route('website.job.details', $job->slug) }}">

@@ -223,7 +223,7 @@
                         {{ __('job_description') }}
                     </div>
                     {!! $job->description !!}
-                    <div class="share-job rt-pt-50">
+                    {{-- <div class="share-job rt-pt-50">
                         <ul class="rt-list gap-8">
                             <li class="d-inline-block body-font-3 text-gray-900">
                                 {{ __('share_this_job') }}:
@@ -256,7 +256,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="col-lg-5">
@@ -529,7 +529,7 @@
         </div>
     </div>
 
-    @if (count($related_jobs))
+    {{-- @if (count($related_jobs))
         <div class="rt-spacer-100 rt-spacer-md-50"></div>
         <!--Related jobs Area-->
         <hr class="hr-0">
@@ -550,10 +550,10 @@
                 </div>
             </div>
         </section>
-    @endif
+    @endif --}}
 
     <!-- Apply Job Modal -->
-    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header border-transparent">
@@ -599,7 +599,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection
 
 @section('css')

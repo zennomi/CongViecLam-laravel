@@ -40,9 +40,9 @@
     @yield('main')
 
     {{-- footer --}}
-    @if (!Route::is('candidate.*') && !Route::is('company.*'))
+    {{-- @if (!Route::is('candidate.*') && !Route::is('company.*'))
         @include('website.partials.footer')
-    @endif
+    @endif --}}
 
     <!-- scripts -->
     @include('website.partials.scripts')
@@ -57,7 +57,7 @@
         {!! $setting->body_script !!}
     @endif
 
-    <x-frontend.cookies-allowance :cookies="$cookies" />
+    {{-- <x-frontend.cookies-allowance :cookies="$cookies" /> --}}
 </body>
 
 </html>

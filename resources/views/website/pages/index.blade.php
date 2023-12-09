@@ -172,7 +172,7 @@
         </div>
     </div>
 
-    <div class="most-popular-area rt-pt-100 rt-pt-md-50">
+    {{-- <div class="most-popular-area rt-pt-100 rt-pt-md-50">
         <div class="container">
             <h4>{{ __('most_popular_vacancies') }}</h4>
             <div class="rt-spacer-40 rt-spacer-md-20"></div>
@@ -192,10 +192,10 @@
             </div>
         </div>
         <div class="rt-spacer-90 rt-spacer-md-50"></div>
-    </div>
+    </div> --}}
 
     <!-- catagory  Start -->
-    <section class="catagory-area rt-pt-100 rt-pt-md-50">
+    {{-- <section class="catagory-area rt-pt-100 rt-pt-md-50">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -238,10 +238,10 @@
             </div>
         </div>
         <div class="rt-spacer-100 rt-spacer-md-50"></div>
-    </section>
+    </section> --}}
 
     <!-- Working Process  Start -->
-    <div class="working-process bg-gray-20 ">
+    {{-- <div class="working-process bg-gray-20 ">
         <div class="rt-spacer-100 rt-spacer-md-50"></div>
         <div class="container">
             <div class="row">
@@ -328,10 +328,10 @@
             </div>
         </div>
         <div class="rt-spacer-100 rt-spacer-md-50"></div>
-    </div>
+    </div> --}}
 
     <!-- feature Job Start -->
-    @if ($featured_jobs && count($featured_jobs))
+    {{-- @if ($featured_jobs && count($featured_jobs))
         <section class="featurejob-area rt-pt-40 rt-pt-md-20">
             <div class="container">
                 <div class="row">
@@ -367,10 +367,10 @@
                 </div>
             </div>
         </section>
-    @endif
+    @endif --}}
 
     <!-- feature Job Start -->
-    @if ($top_companies->count() > 0)
+    {{-- @if ($top_companies->count() > 0)
         <section class="featurejob-area rt-pt-100 rt-pt-md-50">
             <div class="container">
                 <div class="row">
@@ -447,10 +447,10 @@
                 </div>
             </div>
         </section>
-    @endif
+    @endif --}}
 
     <!-- Testimonail Start -->
-    @if ($testimonials->count())
+    {{-- @if ($testimonials->count())
         <div class="rt-spacer-100 rt-spacer-md-50"></div>
         <section class="testimoinals-area bg-gray-20">
             <div class="rt-spacer-100 rt-spacer-md-50"></div>
@@ -532,17 +532,17 @@
             </div>
             <div class="rt-spacer-100 rt-spacer-md-50"></div>
         </section>
-    @endif
+    @endif --}}
 
     <!-- Call to action Start -->
-    @guest
+    {{-- @guest
         <section class="cta-area rt-pt-100 rt-mb-80 rt-pt-md-50 rt-mb-md-40">
             @include('website.partials.call-to-action')
         </section>
-    @endguest
+    @endguest --}}
 
     {{-- Apply job Modal --}}
-    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {{-- <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header border-transparent">
@@ -589,7 +589,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> --}}
 @endsection
 
 @section('css')

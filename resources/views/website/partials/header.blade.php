@@ -154,14 +154,16 @@
                                     </li>
                                     <li class="menu-item"><a class="{{ linkActive('website.job', 'text-primary') }}"
                                             href="{{ route('website.job') }}">{{ __('find_job') }}</a></li>
-                                    <li class="menu-item">
+                                    <li class="menu-item"><a class="{{ linkActive('website.dashboard', 'text-primary') }}"
+                                            href="#">Dashboard</a></li>
+                                    {{-- <li class="menu-item">
                                         <a class="{{ linkActive('website.candidate', 'text-primary') }}"
                                             href="{{ route('website.candidate') }}">{{ __('candidates') }}</a>
-                                    </li>
-                                    <li class="menu-item"><a
+                                    </li> --}}
+                                    {{-- <li class="menu-item"><a
                                             class="{{ linkActive('website.company', 'text-primary') }}"
                                             href="{{ route('website.company') }}">{{ __('companies') }}</a>
-                                    </li>
+                                    </li> --}}
                                     @guest
                                         <div class="mbl-btn d-flex">
                                             <a href="{{ route('register') }}"
@@ -174,7 +176,7 @@
                             </div>
                         @endif
                     </div>
-                    <div class="n-header--top__right d-flex align-items-center">
+                    {{-- <div class="n-header--top__right d-flex align-items-center">
                         @if ($cms_setting->footer_phone_no)
                             <div class="contact-info">
                                 <a class="text-gray-900" href="tel:{{ $cms_setting->footer_phone_no }}">
@@ -263,7 +265,7 @@
                                 </div>
                             </form>
                         @endif
-                    </div>
+                    </div> --}}
                     <div class="mobile-menu">
                         <div class="menu-click">
                             <button class="effect1">

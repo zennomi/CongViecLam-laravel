@@ -138,6 +138,9 @@ trait Jobable
                 case 'latest':
                     $query->latest('id');
                     break;
+                case 'oldest':
+                    $query->oldest('id');
+                    break;
                 case 'featured':
                     $query->where('featured', 1)->latest();
                     break;
