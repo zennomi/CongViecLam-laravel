@@ -59,8 +59,8 @@ class JobFactory extends Factory
             'apply_email'       =>  'ngdatuananh@gmail.com',
             'apply_url'       =>  'https://forms.gle/aaNMRfF88KsY5prb7',
             'country' => $this->faker->country(),
-            'lat' => $this->faker->latitude(8.6, 23),
-            'long' => $this->faker->longitude(102, 107)
+            'lat' => $this->faker->latitude(21.0013862, 22.0016036),
+            'long' => $this->faker->longitude(105.8408742, 105.8420578)
         ];
     }
 }

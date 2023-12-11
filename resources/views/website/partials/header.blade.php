@@ -154,8 +154,8 @@
                                     </li>
                                     <li class="menu-item"><a class="{{ linkActive('website.job', 'text-primary') }}"
                                             href="{{ route('website.job') }}">{{ __('find_job') }}</a></li>
-                                    <li class="menu-item"><a class="{{ linkActive('website.dashboard', 'text-primary') }}"
-                                            href="#">Dashboard</a></li>
+                                    <li class="menu-item"><a class="{{ linkActive('website.job', 'text-primary') }}"
+                                            href="{{ route('website.job') }}">Dashboard</a></li>
                                     {{-- <li class="menu-item">
                                         <a class="{{ linkActive('website.candidate', 'text-primary') }}"
                                             href="{{ route('website.candidate') }}">{{ __('candidates') }}</a>
@@ -387,11 +387,11 @@
                                         <a href="{{ route('login') }}"
                                             class="btn btn-outline-primary">{{ __('sign_in') }}</a>
                                     </li>
-                                    <li class="d-none d-sm-block">
+                                    {{-- <li class="d-none d-sm-block">
                                         <a href="{{ route('company.job.create') }}"
                                             class="btn btn-primary">{{ __('post_job') }}
                                         </a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             @endguest
                         </div>

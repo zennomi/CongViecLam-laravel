@@ -36,7 +36,7 @@ class CompanySeeder extends Seeder
     {
         // Company
         $company = new User();
-        $company->name = 'Cổng Việc Làm';
+        $company->name = 'Paato Group';
         $company->username = 'paato';
         $company->email = 'company@mail.com';
         $company->password = bcrypt('password');
@@ -53,7 +53,7 @@ class CompanySeeder extends Seeder
             'nationality_id' => Nationality::inRandomOrder()->value('id'),
             'bio' => 'Paato là web tìm việc làm hàng đầu Viet Nam.',
             'profile_completion' => 1,
-            'logo' => 'https://telegraph-image-bak.pages.dev/file/3a26a5e56a6db560a6dfb.jpg',
+            'logo' => 'https://telegraph-image-bak.pages.dev/file/700f4027dc52382ddb627.png',
             'banner' => 'https://telegraph-image-bak.pages.dev/file/11bcaa4842a1d6a490d28.jpg',
             'vision' => 'Paato là web tìm việc làm hàng đầu Viet Nam.',
         ]);
@@ -72,7 +72,7 @@ class CompanySeeder extends Seeder
             'email' => 'bk@gmail.com',
         ]);
 
-        Company::factory(10)->create();
+        Company::factory(20)->create();
         // User::factory(10)->create();
         // User::factory(100)->create();
     }
