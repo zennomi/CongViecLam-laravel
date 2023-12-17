@@ -49,7 +49,7 @@ class WebsiteController extends Controller
     public function dashboard()
     {
         if (auth('user')->check() && auth('user')->user()->role == 'candidate') {
-            return redirect()->route('candidate.dashboard');
+            return redirect()->route('candidate.appliedjob');
         } elseif (auth('user')->check() && auth('user')->user()->role == 'company') {
             storePlanInformation();
             return redirect()->route('company.dashboard');

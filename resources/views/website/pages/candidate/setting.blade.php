@@ -29,7 +29,7 @@
                                     {{ __('basic') }}
                                 </button>
                             </li>
-                            <li class="nav-item" role="presentation">
+                            {{-- <li class="nav-item" role="presentation">
                                 <button class="nav-link {{ session('type') == 'profile' ? 'active' : '' }}"
                                     id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
                                     type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
@@ -53,7 +53,7 @@
                                     <x-svg.cog-icon />
                                     {{ __('account_setting') }}
                                 </button>
-                            </li>
+                            </li> --}}
                         </ul>
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade {{ !session('type') || session('type') == 'basic' ? 'show active' : '' }}"

@@ -2,7 +2,7 @@
     <div class="d-sidebar">
         <h3>{{ __('candidate_dashboard') }}</h3>
         <ul class="sidebar-menu">
-            <li>
+            {{-- <li>
                 <a class="{{ request()->routeIs('candidate.dashboard') ? 'active' : '' }}"
                     href="{{ route('candidate.dashboard') }}">
                     <span class="button-content-wrapper ">
@@ -14,7 +14,7 @@
                         </span>
                     </span>
                 </a>
-            </li>
+            </li> --}}
             <li>
                 <a class="{{ request()->routeIs('candidate.appliedjob') ? 'active' : '' }}"
                     href="{{ route('candidate.appliedjob') }}">
@@ -41,7 +41,7 @@
                     </span>
                 </a>
             </li>
-            <li>
+            {{-- <li>
                 <a class="{{ request()->routeIs('candidate.job.alerts') ? 'active' : '' }}"
                     href="{{ route('candidate.job.alerts') }}">
                     <span class="button-content-wrapper ">
@@ -53,7 +53,7 @@
                         </span>
                     </span>
                 </a>
-            </li>
+            </li> --}}
             <li>
                 <a class="{{ request()->routeIs('candidate.setting') ? 'active' : '' }}"
                     href="{{ route('candidate.setting') }}">

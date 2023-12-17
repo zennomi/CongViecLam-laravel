@@ -85,7 +85,7 @@
                                     </span>
                                 </button>
                             </form>
-                            <div class="">
+                            <div class="hidden">
                                 <div class="row">
                                     @php
                                         $google = config('zakirsoft.google_active') && config('zakirsoft.google_id') && config('zakirsoft.google_secret');

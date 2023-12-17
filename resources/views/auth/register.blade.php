@@ -40,7 +40,7 @@
                                             </span>
                                         </span>
                                     </div>
-                                    <div class="col-lg-4 col-md-12 align-self-center rt-mb-lg-20">
+                                    <div class="col-lg-4 col-md-12 align-self-center rt-mb-lg-20 hidden">
                                         @if (old('role'))
                                             <select name="role" class="rt-selectactive w-100-p">
                                                 <option {{ old('role') == 'candidate' ? 'selected' : '' }}
@@ -149,7 +149,7 @@
                                         @endphp
 
                                         @if ($google)
-                                            <div class="justify-content-center col-sm-6 mb-1">
+                                            <div class="justify-content-center col-sm-6 mb-1 hidden">
                                                 <button onclick="LoginService('google')" type="button"
                                                     class="btn btn-outline-plain  custom-padding me-3 rt-mb-xs-10 ">
                                                     <span class="button-content-wrapper ">

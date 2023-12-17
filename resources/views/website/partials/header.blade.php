@@ -42,7 +42,7 @@
                                                 <x-website.company.notifications-component />
                                             @endif
                                             @if (auth()->user()->role == 'candidate')
-                                                <x-website.candidate.notifications-component />
+                                                {{-- <x-website.candidate.notifications-component /> --}}
                                             @endif
                                             @company
                                                 <li class="relative">
@@ -131,18 +131,18 @@
                                         <li class="menu-item"><a
                                                 class="{{ linkActive('website.job', 'text-primary') }}"
                                                 href="{{ route('website.job') }}">{{ __('find_job') }}</a></li>
-                                        <li class="menu-item">
+                                        {{-- <li class="menu-item">
                                             <a class="{{ linkActive('website.company', 'text-primary') }}"
                                                 href="{{ route('website.company') }}">{{ __('find_employers') }}</a>
-                                        </li>
+                                        </li> --}}
                                         <li class="menu-item"><a
                                                 class="{{ linkActive('candidate.dashboard', 'text-primary') }}"
-                                                href="{{ route('candidate.dashboard') }}">{{ __('dashboard') }}</a>
+                                                href="{{ route('candidate.appliedjob') }}">{{ __('dashboard') }}</a>
                                         </li>
-                                        <li class="menu-item"><a
+                                        {{-- <li class="menu-item"><a
                                                 class="{{ linkActive('candidate.job', 'text-primary') }}"
                                                 href="{{ route('candidate.job.alerts') }}">{{ __('job_alert') }}</a>
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </div>
                             @endif
@@ -154,8 +154,6 @@
                                     </li>
                                     <li class="menu-item"><a class="{{ linkActive('website.job', 'text-primary') }}"
                                             href="{{ route('website.job') }}">{{ __('find_job') }}</a></li>
-                                    <li class="menu-item"><a class="{{ linkActive('website.job', 'text-primary') }}"
-                                            href="{{ route('website.job') }}">Dashboard</a></li>
                                     {{-- <li class="menu-item">
                                         <a class="{{ linkActive('website.candidate', 'text-primary') }}"
                                             href="{{ route('website.candidate') }}">{{ __('candidates') }}</a>
@@ -338,12 +336,12 @@
                             </div>
                             @auth('user')
                                 <ul class="custom-border list-unstyled d-flex align-items-center justify-content-between">
-                                    @if (auth()->user()->role == 'company')
+                                    {{-- @if (auth()->user()->role == 'company')
                                         <x-website.company.notifications-component />
                                     @endif
                                     @if (auth()->user()->role == 'candidate')
                                         <x-website.candidate.notifications-component />
-                                    @endif
+                                    @endif --}}
 
                                     <li class="relative">
                                         <a href="{{ route('user.dashboard') }} " class="candidate-profile">
