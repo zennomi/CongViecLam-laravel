@@ -120,7 +120,7 @@
     @endif
 
     @if (Session::has('success'))
-        toastr.success("{{ Session::get('success') }}", 'Success!')
+        toastr.success("{{ Session::get('success') }}", 'Thành công!')
     @endif
 
     @if (Session::has('warning'))
