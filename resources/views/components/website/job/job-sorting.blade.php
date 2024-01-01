@@ -17,12 +17,12 @@
                                     value="">
                                     {{ __('sortby') }}
                                 </option>
-                                @if (auth('user')->check())
+                                {{-- @if (auth('user')->check())
                                     <option {{ request('sort_by') == 'recommanded' ? 'selected' : '' }}
                                         value="recommanded">
                                         {{ __('recommanded') }}
                                     </option>
-                                @endif
+                                @endif --}}
                                 <option {{ request('sort_by') == 'latest' ? 'selected' : '' }} value="latest">
                                     {{ __('latest') }}
                                 </option>
@@ -35,12 +35,9 @@
                             </select>
                         </div>
                         @if (request('location'))
-                            <div class="left-content">
+                            <div class="left-content ms-2">
                                 <select class="rt-selectactive gap" name="radius" id="radius">
-                                    <option {{ request('radius') == 0 ? 'selected' : '' }} value="0">
-                                        {{ __('exact_location_only') }}
-                                    </option>
-                                    <option {{ request('radius') == 5 ? 'selected' : '' }} value="5">
+                                    <option {{ request('radius') == 0 || request('radius') == 5 ? 'selected' : '' }} value="5">
                                         {{ __('within') }} 5 {{ __('miles') }}
                                     </option>
                                     <option {{ request('radius') == 10 ? 'selected' : '' }} value="10">

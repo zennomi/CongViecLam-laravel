@@ -16,7 +16,7 @@ class ExperienceSeeder extends Seeder
     public function run()
     {
         $experiences = [
-            'Người mới', '1 Năm kinh nghiệm', '2 Năm kinh nghiệm', '3+ Năm kinh nghiệm', '5+ Năm kinh nghiệm', '8+ Năm kinh nghiệm', '10+ Năm kinh nghiệm', '15+ Năm kinh nghiệm'
+            'Không kinh nghiệm', '1 Năm kinh nghiệm', '2 Năm kinh nghiệm', '3+ Năm kinh nghiệm', '5+ Năm kinh nghiệm', '8+ Năm kinh nghiệm', '10+ Năm kinh nghiệm', '15+ Năm kinh nghiệm'
         ];
 
         foreach ($experiences as $experience) {

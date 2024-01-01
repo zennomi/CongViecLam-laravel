@@ -439,7 +439,7 @@ trait Jobable
         if ($request->has('radius') && $request->radius != null) {
             $distance = $request->radius;
         } else {
-            $distance = 50;
+            $distance = 5;
         }
 
         $haversine = "(
