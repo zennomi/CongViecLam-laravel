@@ -131,8 +131,10 @@
                             <li class="d-block ">
                                 <div class="jobwidget_tiitle2">{{ __('salary') }}</div>
                                 <ul class="sub-catagory2">
-                                    <input type="hidden" name="price_min" id="price_min">
-                                    <input type="hidden" name="price_max" id="price_max">
+                                    <input type="hidden" name="price_min" id="price_min"
+                                        value="{{ request('price_min') }}">
+                                    <input type="hidden" name="price_max" id="price_max"
+                                        value="{{ request('price_max') }}">
                                     <div id="priceCollapse" class="accordion-collapse collapse show mt-2"
                                         aria-labelledby="priceTag" data-bs-parent="#accordionGroup">
                                         <div class="accordion-body list-sidebar__accordion-body">
@@ -161,8 +163,7 @@
                                     @foreach ($educations as $education)
                                         <li class="d-block">
                                             <div class="form-check from-radio-custom">
-                                                <input
-                                                    {{ request('education') == $education->name ? 'checked' : '' }}
+                                                <input {{ request('education') == $education->name ? 'checked' : '' }}
                                                     class="form-check-input" type="radio"
                                                     value="{{ $education->name }}" name="education"
                                                     id="{{ $education->slug }}">
@@ -180,9 +181,8 @@
                                 <ul class="sub-catagory2">
                                     <li class="d-block">
                                         <div class="form-check from-radio-custom">
-                                            <input {{ request('job_type') ? '' : 'checked' }}
-                                                class="form-check-input" type="radio" value=""
-                                                name="job_type" id="ck01">
+                                            <input {{ request('job_type') ? '' : 'checked' }} class="form-check-input"
+                                                type="radio" value="" name="job_type" id="ck01">
                                             <label class="form-check-label pointer text-gray-700 f-size-14"
                                                 for="ck01">
                                                 {{ __('all') }}
@@ -192,7 +192,7 @@
                                     @foreach ($jobTypes as $type)
                                         <li class="d-block">
                                             <div class="form-check from-radio-custom">
-                                                <input {{ request('job_type') == $type->slug ? 'checked' : '' }}
+                                                <input {{ request('job_type') == $type->name ? 'checked' : '' }}
                                                     class="form-check-input" type="radio"
                                                     value="{{ $type->name }}" name="job_type"
                                                     id="{{ $type->name }}">
@@ -300,7 +300,7 @@
             document.getElementById('price_max').value = value[1]
             const form = $('#job_search_form')
             const data = form.serializeArray();
-            $('#job_search_form').submit()
+            // $('#job_search_form').submit()
         }
 
         function setDefaultPriceRangeValue() {
@@ -315,7 +315,7 @@
             let maxPrice = maxRange;
             @if (request()->has('price_min') && request()->has('price_max'))
                 minPrice = Number.parseInt("{{ request('price_min', 0) }}")
-                maxPrice = Number.parseInt("{{ request('price_max', 500) }}")
+                maxPrice = Number.parseInt("{{ request('price_max', $maxSalary) }}")
             @endif
             noUiSlider.create(slider, {
                 start: [minPrice, maxPrice],
