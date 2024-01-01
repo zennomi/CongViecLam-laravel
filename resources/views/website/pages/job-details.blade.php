@@ -264,10 +264,15 @@
                         <div class="row">
                             <div class="col-sm-6 salery tw-salery-border">
                                 <h4>Lương</h4>
-                                <h2>{{ currencyPosition($job->min_salary) }}
-                                    -
-                                    {{ currencyPosition($job->max_salary) }}
-                                </h2>
+                                @if ($job->min_salary == $job->max_salary)
+                                    <h2>{{ currencyPosition($job->min_salary) }}
+                                    </h2>
+                                @else
+                                    <h2>{{ currencyPosition($job->min_salary) }}
+                                        -
+                                        {{ currencyPosition($job->max_salary) }}
+                                    </h2>
+                                @endif
                                 <p>{{ $job->salary_type->name }}</p>
                             </div>
                             <div class="col-sm-6 job-type">
@@ -291,12 +296,13 @@
                                                 stroke-linecap="round" stroke-linejoin="round"></path>
                                         </svg>
                                     </div>
+                                    <h4 class="tw-mb-[2px]">Hình thức làm việc</h4>
                                     @if ($job->is_remote)
-                                        <h4 class="tw-mb-[2px]">Remote</h4>
+                                        <p class="tw-mb-0">Remote</p>
                                     @else
-                                        <h4 class="tw-mb-[2px]">Trực tiếp</h4>
+                                        <p class="tw-mb-0">Trực tiếp</p>
                                     @endif
-                                    <p class="tw-mb-0">{{ $job->vacancies }}</p>
+                                    {{-- <p class="tw-mb-0">{{ $job->vacancies }}</p> --}}
                                 </div>
                             </div>
                         </div>
@@ -553,7 +559,7 @@
     @endif --}}
 
     <!-- Apply Job Modal -->
-    {{-- <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header border-transparent">
@@ -599,7 +605,7 @@
                 </form>
             </div>
         </div>
-    </div> --}}
+    </div>
 @endsection
 
 @section('css')
@@ -642,7 +648,7 @@
             container: 'map-box',
             style: 'mapbox://styles/mapbox/streets-v11',
             center: [oldlng, oldlat],
-            zoom: 6
+            zoom: 15
         });
 
         var marker = new mapboxgl.Marker({
