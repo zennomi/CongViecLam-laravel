@@ -36,6 +36,8 @@ class JobFactory extends Factory
     {
         $title = $this->faker->unique()->jobTitle();
 
+        $min_salary = random_int(1, 10) * 500000;
+
         return [
             'title'              =>  $title,
             'slug'              =>  Str::slug($title),
@@ -47,18 +49,20 @@ class JobFactory extends Factory
             'job_type_id'  => JobType::inRandomOrder()->value('id'),
             'salary_type_id' =>  SalaryType::inRandomOrder()->value('id'),
             'vacancies' =>  $this->faker->randomElement(['1-2', '2-3', '3-5', '5-10', '10-20']),
-            'min_salary'        =>  random_int(1, 10) * 500000,
-            'max_salary'        =>  random_int(10, 100) * 500000,
+            'min_salary'        =>  $min_salary,
+            'max_salary'        =>  $min_salary + random_int(0, 4) * 500000,
             'deadline'          =>  $this->faker->dateTimeBetween('now', '+07 days'),
             'description'       =>  $this->faker->text(),
             'is_remote'       =>  rand(0, 1),
-            'status'       =>  $this->faker->randomElement(['pending', 'active', 'expired']),
-            'featured'       =>  rand(0, 1),
-            'highlight'       =>  rand(0, 1),
-            'apply_on'       =>  Arr::random(['app', 'email', 'custom_url','app','app']),
-            'apply_email'       =>  'ngdatuananh@gmail.com',
+            // 'status'       =>  $this->faker->randomElement(['pending', 'active', 'expired']),
+            'status'       =>  'active',
+            'featured'       =>  0,
+            'highlight'       =>  0,
+            // 'apply_on'       =>  Arr::random(['app', 'email', 'custom_url','app','app']),
+            'apply_on'       =>  'app',
+            'apply_email'       =>  'company@gmail.com',
             'apply_url'       =>  'https://forms.gle/aaNMRfF88KsY5prb7',
-            'country' => $this->faker->country(),
+            'country' => 'Viet Nam',
             'lat' => $this->faker->latitude(21.0013862, 22.0016036),
             'long' => $this->faker->longitude(105.8408742, 105.8420578)
         ];
